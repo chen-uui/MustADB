@@ -1,0 +1,77 @@
+# 地外有机质数据库系统依赖配置
+# 基于实测环境的精确版本锁定
+# 更新时间: 2025年1月
+
+# Django核心框架
+Django==5.2.1
+djangorestframework==3.15.2
+django-cors-headers==4.7.0
+django-extensions==3.2.3
+
+# 向量数据库和嵌入
+weaviate-client==4.16.7
+sentence-transformers==2.7.0
+
+# 大语言模型集成
+openai==1.99.9
+# 注意：langchain相关包已移除，当前系统使用直接的OpenAI API调用
+# 如需要langchain功能，请根据实际使用情况添加对应包：
+# langchain==0.3.27
+# langchain-openai==0.3.12
+# langchain-community==0.3.27
+# langchain-core==0.3.74
+# langchain-text-splitters==0.3.9
+tiktoken==0.8.0
+
+# PDF处理和文档解析
+# PDF处理
+PyMuPDF==1.24.3  # 统一使用PyMuPDF进行PDF处理
+python-multipart==0.0.20
+reportlab==4.4.0
+
+# OCR支持（可选，用于处理扫描版PDF）
+# 安装EasyOCR (推荐): pip install easyocr
+# 安装Tesseract: pip install pytesseract pillow (需要单独安装Tesseract系统包)
+# 安装PaddleOCR: pip install paddlepaddle paddleocr (中文识别效果好)
+# Pillow是图像处理必需的
+Pillow>=10.0.0  # 图像处理，OCR必需
+
+# 数据处理和分析
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.3
+
+# 网络和HTTP请求
+requests==2.32.4
+urllib3==2.5.0
+httpx==0.28.1
+
+# 缓存和性能优化
+redis==5.2.1
+
+# 环境配置和工具
+python-dotenv==1.0.0
+tqdm==4.67.1
+click==8.2.1
+
+# 日志和监控
+structlog==25.2.0
+
+# 文本处理和正则表达式
+regex==2024.11.6
+
+# 数据库驱动
+psycopg2-binary==2.9.10  # PostgreSQL驱动
+
+# Hugging Face集成
+huggingface-hub==0.25.1
+
+# 开发工具（可选）
+pytest==8.3.5
+pytest-django==4.11.1
+black==25.1.0
+flake8==7.2.0
+
+# 兼容性依赖
+packaging==24.2
+pydantic==2.11.3

@@ -1,0 +1,683 @@
+{
+  "timestamps": {
+    "started_at": "2026-03-17T04:46:08.944983+00:00"
+  },
+  "preview_live_unpatched": {
+    "start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "49fc0ea3-e8d9-41e1-b4a4-aec61c3a1374",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "task_id": "49fc0ea3-e8d9-41e1-b4a4-aec61c3a1374",
+    "task_status": "failed",
+    "completed_at": "2026-03-17T04:46:09.161393+00:00",
+    "results": {
+      "error_type": "NameError",
+      "error_message": "name 'preview_only' is not defined",
+      "latest_progress": {
+        "status": "failed",
+        "failed_at": "2026-03-17T04:46:09.109556+00:00",
+        "error_type": "NameError",
+        "status_text": "failed",
+        "error_message": "name 'preview_only' is not defined"
+      }
+    },
+    "snapshot_count": 2,
+    "pending_before": 1,
+    "pending_after": 1,
+    "approved_before": 8,
+    "approved_after": 8
+  },
+  "preview_patched": {
+    "start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "c9926d71-0b11-409f-82d1-a76d2a7a3f17",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "task_id": "c9926d71-0b11-409f-82d1-a76d2a7a3f17",
+    "task_status": "preview_ready",
+    "completed_at": "2026-03-17T04:46:09.491304+00:00",
+    "extraction_results_count": 0,
+    "latest_progress": {
+      "merge_stats": {
+        "merge_rate": 0.0,
+        "avg_confidence": 0.93,
+        "total_unique_meteorites": 1
+      },
+      "status_text": "preview_ready",
+      "quality_metrics": {
+        "extraction_efficiency": 1.0,
+        "data_consolidation_rate": 0.0
+      },
+      "total_documents": 1,
+      "extraction_stats": {},
+      "processing_stats": {
+        "new_extractions": 1,
+        "total_documents": 1,
+        "total_meteorites": 1,
+        "merged_extractions": 0,
+        "processed_documents": 1,
+        "documents_per_minute": 367.2357893231496,
+        "processing_time_seconds": 0.16338276863098145
+      },
+      "failed_extractions": 0,
+      "processed_documents": 1,
+      "progress_percentage": 100.0,
+      "successful_extractions": 1
+    },
+    "results": {
+      "merge_stats": {
+        "merge_rate": 0.0,
+        "avg_confidence": 0.93,
+        "total_unique_meteorites": 1
+      },
+      "latest_progress": {
+        "merge_stats": {
+          "merge_rate": 0.0,
+          "avg_confidence": 0.93,
+          "total_unique_meteorites": 1
+        },
+        "status_text": "preview_ready",
+        "quality_metrics": {
+          "extraction_efficiency": 1.0,
+          "data_consolidation_rate": 0.0
+        },
+        "total_documents": 1,
+        "extraction_stats": {},
+        "processing_stats": {
+          "new_extractions": 1,
+          "total_documents": 1,
+          "total_meteorites": 1,
+          "merged_extractions": 0,
+          "processed_documents": 1,
+          "documents_per_minute": 367.2357893231496,
+          "processing_time_seconds": 0.16338276863098145
+        },
+        "failed_extractions": 0,
+        "processed_documents": 1,
+        "progress_percentage": 100.0,
+        "successful_extractions": 1
+      },
+      "quality_metrics": {
+        "extraction_efficiency": 1.0,
+        "data_consolidation_rate": 0.0
+      },
+      "extraction_stats": {},
+      "processing_stats": {
+        "new_extractions": 1,
+        "total_documents": 1,
+        "total_meteorites": 1,
+        "merged_extractions": 0,
+        "processed_documents": 1,
+        "documents_per_minute": 367.2357893231496,
+        "processing_time_seconds": 0.16338276863098145
+      },
+      "extraction_results": [],
+      "incremental_merge_report": {
+        "merge_stats": {
+          "merge_rate": 0.0,
+          "avg_confidence": 0.93,
+          "total_unique_meteorites": 1
+        },
+        "quality_metrics": {
+          "extraction_efficiency": 1.0,
+          "data_consolidation_rate": 0.0
+        },
+        "processing_stats": {
+          "new_extractions": 1,
+          "total_documents": 1,
+          "total_meteorites": 1,
+          "merged_extractions": 0,
+          "processed_documents": 1,
+          "documents_per_minute": 367.2357893231496,
+          "processing_time_seconds": 0.16338276863098145
+        },
+        "extraction_results": []
+      }
+    },
+    "pending_before": 1,
+    "pending_after": 2,
+    "approved_before": 8,
+    "approved_after": 8
+  },
+  "confirm_save": {
+    "response": {
+      "status_code": 400,
+      "json": {
+        "success": false,
+        "error": "No preview extraction results available for confirmation"
+      }
+    },
+    "task_id": "c9926d71-0b11-409f-82d1-a76d2a7a3f17",
+    "pending_before": 2,
+    "pending_after": 2,
+    "saved_pending_ids_exist": [],
+    "task_status_after_confirm": "preview_ready",
+    "task_results_after_confirm": {
+      "merge_stats": {
+        "merge_rate": 0.0,
+        "avg_confidence": 0.93,
+        "total_unique_meteorites": 1
+      },
+      "latest_progress": {
+        "merge_stats": {
+          "merge_rate": 0.0,
+          "avg_confidence": 0.93,
+          "total_unique_meteorites": 1
+        },
+        "status_text": "preview_ready",
+        "quality_metrics": {
+          "extraction_efficiency": 1.0,
+          "data_consolidation_rate": 0.0
+        },
+        "total_documents": 1,
+        "extraction_stats": {},
+        "processing_stats": {
+          "new_extractions": 1,
+          "total_documents": 1,
+          "total_meteorites": 1,
+          "merged_extractions": 0,
+          "processed_documents": 1,
+          "documents_per_minute": 367.2357893231496,
+          "processing_time_seconds": 0.16338276863098145
+        },
+        "failed_extractions": 0,
+        "processed_documents": 1,
+        "progress_percentage": 100.0,
+        "successful_extractions": 1
+      },
+      "quality_metrics": {
+        "extraction_efficiency": 1.0,
+        "data_consolidation_rate": 0.0
+      },
+      "extraction_stats": {},
+      "processing_stats": {
+        "new_extractions": 1,
+        "total_documents": 1,
+        "total_meteorites": 1,
+        "merged_extractions": 0,
+        "processed_documents": 1,
+        "documents_per_minute": 367.2357893231496,
+        "processing_time_seconds": 0.16338276863098145
+      },
+      "extraction_results": [],
+      "incremental_merge_report": {
+        "merge_stats": {
+          "merge_rate": 0.0,
+          "avg_confidence": 0.93,
+          "total_unique_meteorites": 1
+        },
+        "quality_metrics": {
+          "extraction_efficiency": 1.0,
+          "data_consolidation_rate": 0.0
+        },
+        "processing_stats": {
+          "new_extractions": 1,
+          "total_documents": 1,
+          "total_meteorites": 1,
+          "merged_extractions": 0,
+          "processed_documents": 1,
+          "documents_per_minute": 367.2357893231496,
+          "processing_time_seconds": 0.16338276863098145
+        },
+        "extraction_results": []
+      }
+    }
+  },
+  "forced_failure": {
+    "start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "f5e8eece-45b5-437c-95c1-a5cff6f0971f",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "task_id": "f5e8eece-45b5-437c-95c1-a5cff6f0971f",
+    "task_status": "failed",
+    "completed_at": "2026-03-17T04:46:09.598018+00:00",
+    "results": {
+      "error_type": "RuntimeError",
+      "error_message": "codex-forced-start-from-db-failure",
+      "latest_progress": {
+        "status": "failed",
+        "failed_at": "2026-03-17T04:46:09.548415+00:00",
+        "error_type": "RuntimeError",
+        "status_text": "failed",
+        "error_message": "codex-forced-start-from-db-failure"
+      }
+    },
+    "snapshot_count": 2
+  },
+  "task_controls": {
+    "start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "16bcca2f-df13-4358-af23-ff5f432e6a2e",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "task_id": "16bcca2f-df13-4358-af23-ff5f432e6a2e",
+    "thread_running_initial": true,
+    "canonical": {
+      "status_existing": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "data": {
+            "task_id": "16bcca2f-df13-4358-af23-ff5f432e6a2e",
+            "task_type": "rag_extraction",
+            "status": "running",
+            "created_at": "2026-03-17T04:46:09.755701Z",
+            "started_at": "2026-03-17T04:46:09.755701Z",
+            "completed_at": null,
+            "total_documents": 40,
+            "processed_documents": 4,
+            "successful_extractions": 4,
+            "failed_extractions": 0,
+            "progress_percentage": 10.0,
+            "parameters": {
+              "query": "codex-route-test",
+              "max_documents": 3,
+              "search_config": {
+                "searchQuery": "codex-route-test",
+                "maxDocuments": 3,
+                "relevanceThreshold": 0.1
+              },
+              "extraction_options": {
+                "extractLocation": true,
+                "extractBasicInfo": true,
+                "extractReferences": false,
+                "extractContamination": false,
+                "extractClassification": true,
+                "extractOrganicCompounds": true
+              },
+              "relevance_threshold": 0.1
+            },
+            "results": {
+              "latest_progress": {
+                "status": "running",
+                "status_text": "running-4",
+                "total_documents": 40,
+                "failed_extractions": 0,
+                "processed_documents": 4,
+                "progress_percentage": 10.0,
+                "successful_extractions": 4
+              }
+            },
+            "status_info": {
+              "status": "running",
+              "progress": {
+                "progress_percentage": 10.0,
+                "total_documents": 40,
+                "processed_documents": 4,
+                "successful_extractions": 4,
+                "failed_extractions": 0,
+                "status_text": "running-4",
+                "status": "running"
+              }
+            }
+          }
+        }
+      },
+      "status_missing": {
+        "status_code": 404,
+        "json": {
+          "success": false,
+          "error": "request failed"
+        }
+      },
+      "pause_existing": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task paused successfully"
+        }
+      },
+      "resume_existing": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task resumed successfully"
+        }
+      },
+      "stop_existing": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task stopped successfully"
+        }
+      },
+      "pause_missing": {
+        "status_code": 404,
+        "json": {
+          "success": false,
+          "error": "Task thread not found or already finished"
+        }
+      },
+      "resume_missing": {
+        "status_code": 404,
+        "json": {
+          "success": false,
+          "error": "Task thread not found or already finished"
+        }
+      },
+      "stop_missing": {
+        "status_code": 404,
+        "json": {
+          "success": false,
+          "error": "Task thread not found or already finished"
+        }
+      },
+      "paused_db_status": "paused",
+      "paused_processed_documents": 4,
+      "resumed_db_status": "running",
+      "resumed_processed_documents": 7,
+      "stopped_db_status": "cancelled",
+      "stopped_completed_at": "2026-03-17T04:46:12.394590+00:00",
+      "thread_running_after_stop": true,
+      "stop_snapshot_count": 1
+    },
+    "compat_task_id": "72e8ee21-bf34-4f97-9dfd-decd71729ed6",
+    "compat_start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "72e8ee21-bf34-4f97-9dfd-decd71729ed6",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "compat": {
+      "pause": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task paused successfully"
+        }
+      },
+      "resume": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task resumed successfully"
+        }
+      },
+      "status": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "data": {
+            "task_id": "72e8ee21-bf34-4f97-9dfd-decd71729ed6",
+            "task_type": "rag_extraction",
+            "status": "running",
+            "created_at": "2026-03-17T04:46:12.400690Z",
+            "started_at": "2026-03-17T04:46:12.400690Z",
+            "completed_at": null,
+            "total_documents": 40,
+            "processed_documents": 5,
+            "successful_extractions": 5,
+            "failed_extractions": 0,
+            "progress_percentage": 12.5,
+            "parameters": {
+              "query": "codex-compat-route-test",
+              "max_documents": 3,
+              "search_config": {
+                "searchQuery": "codex-compat-route-test",
+                "maxDocuments": 3,
+                "relevanceThreshold": 0.1
+              },
+              "extraction_options": {
+                "extractLocation": true,
+                "extractBasicInfo": true,
+                "extractReferences": false,
+                "extractContamination": false,
+                "extractClassification": true,
+                "extractOrganicCompounds": true
+              },
+              "relevance_threshold": 0.1
+            },
+            "results": {
+              "latest_progress": {
+                "status": "running",
+                "status_text": "running-5",
+                "total_documents": 40,
+                "failed_extractions": 0,
+                "processed_documents": 5,
+                "progress_percentage": 12.5,
+                "successful_extractions": 5
+              }
+            },
+            "status_info": {
+              "status": "running",
+              "progress": {
+                "progress_percentage": 12.5,
+                "total_documents": 40,
+                "processed_documents": 5,
+                "successful_extractions": 5,
+                "failed_extractions": 0,
+                "status_text": "running-5",
+                "status": "running",
+                "pause_hits": 3
+              }
+            }
+          }
+        }
+      },
+      "stop": {
+        "status_code": 200,
+        "json": {
+          "success": true,
+          "message": "Task stopped successfully"
+        }
+      },
+      "final_status": "cancelled",
+      "thread_running_after_stop": true,
+      "snapshot_count": 1
+    }
+  },
+  "force_cleanup": {
+    "task_id": "f978c920-d3c6-4469-97d1-f7f25cc76dba",
+    "start_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "data": {
+          "task_id": "f978c920-d3c6-4469-97d1-f7f25cc76dba",
+          "status": "running",
+          "message": "浠诲姟宸插湪鍚庡彴鍚姩"
+        }
+      }
+    },
+    "cleanup_response": {
+      "status_code": 200,
+      "json": {
+        "success": true,
+        "message": "cleaned 1 running tasks",
+        "cleaned_count": 1,
+        "stopped_count": 1,
+        "missing_thread_count": 0,
+        "results": [
+          {
+            "task_id": "f978c920-d3c6-4469-97d1-f7f25cc76dba",
+            "thread_stop_signaled": true,
+            "db_status_updated": true
+          }
+        ]
+      }
+    },
+    "thread_running_immediately_after": true,
+    "before_cleanup": {
+      "status": "running",
+      "processed_documents": 4,
+      "results": {
+        "latest_progress": {
+          "status": "running",
+          "status_text": "running-4",
+          "total_documents": 40,
+          "failed_extractions": 0,
+          "processed_documents": 4,
+          "progress_percentage": 10.0,
+          "successful_extractions": 4
+        }
+      }
+    },
+    "after_5s": {
+      "status": "cancelled",
+      "processed_documents": 5,
+      "results": {
+        "merge_stats": {},
+        "latest_progress": {
+          "merge_stats": {},
+          "status_text": "stopped",
+          "quality_metrics": {},
+          "total_documents": 40,
+          "extraction_stats": {
+            "failed_extractions": 0
+          },
+          "processing_stats": {
+            "new_extractions": 5,
+            "total_documents": 40,
+            "total_meteorites": 0,
+            "merged_extractions": 0,
+            "processed_documents": 5,
+            "documents_per_minute": 0.0,
+            "processing_time_seconds": 0.0
+          },
+          "failed_extractions": 0,
+          "processed_documents": 5,
+          "progress_percentage": 12.5,
+          "successful_extractions": 5
+        },
+        "quality_metrics": {},
+        "extraction_stats": {
+          "failed_extractions": 0
+        },
+        "processing_stats": {
+          "new_extractions": 5,
+          "total_documents": 40,
+          "total_meteorites": 0,
+          "merged_extractions": 0,
+          "processed_documents": 5,
+          "documents_per_minute": 0.0,
+          "processing_time_seconds": 0.0
+        },
+        "extraction_results": [],
+        "incremental_merge_report": {
+          "merge_stats": {},
+          "quality_metrics": {},
+          "extraction_stats": {
+            "failed_extractions": 0
+          },
+          "processing_stats": {
+            "new_extractions": 5,
+            "total_documents": 40,
+            "total_meteorites": 0,
+            "merged_extractions": 0,
+            "processed_documents": 5,
+            "documents_per_minute": 0.0,
+            "processing_time_seconds": 0.0
+          },
+          "extraction_results": []
+        }
+      },
+      "thread_running": false
+    },
+    "after_35s": {
+      "status": "cancelled",
+      "processed_documents": 5,
+      "results": {
+        "merge_stats": {},
+        "latest_progress": {
+          "merge_stats": {},
+          "status_text": "stopped",
+          "quality_metrics": {},
+          "total_documents": 40,
+          "extraction_stats": {
+            "failed_extractions": 0
+          },
+          "processing_stats": {
+            "new_extractions": 5,
+            "total_documents": 40,
+            "total_meteorites": 0,
+            "merged_extractions": 0,
+            "processed_documents": 5,
+            "documents_per_minute": 0.0,
+            "processing_time_seconds": 0.0
+          },
+          "failed_extractions": 0,
+          "processed_documents": 5,
+          "progress_percentage": 12.5,
+          "successful_extractions": 5
+        },
+        "quality_metrics": {},
+        "extraction_stats": {
+          "failed_extractions": 0
+        },
+        "processing_stats": {
+          "new_extractions": 5,
+          "total_documents": 40,
+          "total_meteorites": 0,
+          "merged_extractions": 0,
+          "processed_documents": 5,
+          "documents_per_minute": 0.0,
+          "processing_time_seconds": 0.0
+        },
+        "extraction_results": [],
+        "incremental_merge_report": {
+          "merge_stats": {},
+          "quality_metrics": {},
+          "extraction_stats": {
+            "failed_extractions": 0
+          },
+          "processing_stats": {
+            "new_extractions": 5,
+            "total_documents": 40,
+            "total_meteorites": 0,
+            "merged_extractions": 0,
+            "processed_documents": 5,
+            "documents_per_minute": 0.0,
+            "processing_time_seconds": 0.0
+          },
+          "extraction_results": []
+        }
+      },
+      "thread_running": false
+    },
+    "results_stable_after_cleanup": true,
+    "processed_documents_stable_after_cleanup": true
+  },
+  "cleanup": {
+    "deleted_pending_ids": [],
+    "task_ids_observed": [
+      "49fc0ea3-e8d9-41e1-b4a4-aec61c3a1374",
+      "c9926d71-0b11-409f-82d1-a76d2a7a3f17",
+      "f5e8eece-45b5-437c-95c1-a5cff6f0971f",
+      "16bcca2f-df13-4358-af23-ff5f432e6a2e",
+      "72e8ee21-bf34-4f97-9dfd-decd71729ed6",
+      "f978c920-d3c6-4469-97d1-f7f25cc76dba"
+    ],
+    "finished_at": "2026-03-17T04:46:50.474880+00:00"
+  }
+}

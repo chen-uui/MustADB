@@ -1,0 +1,603 @@
+/* 工作台主样式文件 */
+
+/* 配色变量 */
+:root {
+  --workspace-primary: #667eea;
+  --workspace-primary-dark: #5568d3;
+  --workspace-secondary: #764ba2;
+  --workspace-success: #10b981;
+  --workspace-warning: #f59e0b;
+  --workspace-error: #ef4444;
+  --workspace-info: #3b82f6;
+  --workspace-bg: #f8fafc;
+  --workspace-surface: #ffffff;
+  --workspace-border: #e2e8f0;
+  --workspace-text: #1e293b;
+  --workspace-text-light: #64748b;
+  --workspace-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --workspace-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 主容器样式 */
+.rag-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.workspace-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 工作台模式样式 */
+.workspace-mode {
+  background: transparent !important;
+  
+  /* 隐藏原有页面标题 */
+  .page-header {
+    display: none !important;
+  }
+  
+  /* 调整内容区域 */
+  .content-area {
+    padding: 0 !important;
+  }
+  
+  /* 调整导航按钮 */
+  .home-btn {
+    display: none !important;
+  }
+  
+  /* 调整页面标题 */
+  .page-title {
+    display: none !important;
+  }
+}
+
+/* 标签页样式 */
+.tab-navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--workspace-text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tab-button:hover::before {
+  opacity: 1;
+}
+
+.tab-button:hover {
+  background: rgba(102, 126, 234, 0.08);
+  color: var(--workspace-primary);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, var(--workspace-primary) 0%, var(--workspace-secondary) 100%);
+  color: white;
+  box-shadow: var(--workspace-shadow);
+  transform: translateY(-2px);
+}
+
+.tab-button.active::before {
+  opacity: 0;
+}
+
+.tab-button i {
+  font-size: 1rem;
+}
+
+/* 状态指示器样式 */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-indicator.status-idle {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-indicator.status-processing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-indicator.status-error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* 进度条样式 */
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 系统消息样式 */
+.system-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.message {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  animation: slideIn 0.3s ease;
+}
+
+.message.info {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.message.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 连接状态样式 */
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.connection-status i {
+  font-size: 1rem;
+}
+
+.connection-status i.bi-wifi {
+  color: #28a745;
+}
+
+.connection-status i.bi-wifi-off {
+  color: #dc3545;
+}
+
+/* 文档状态样式 */
+.document-status {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.document-status.uploaded {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.document-status.processing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.document-status.processed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.document-status.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.document-status.deleted {
+  background: #f8d9da;
+  color: #721c24;
+}
+
+/* 操作按钮样式 */
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--workspace-border);
+  background: var(--workspace-surface);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--workspace-text);
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.action-btn:hover:not(.disabled)::before {
+  left: 100%;
+}
+
+.action-btn:hover:not(.disabled) {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-color: var(--workspace-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--workspace-shadow);
+}
+
+.action-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.action-btn i {
+  font-size: 1rem;
+  width: 1rem;
+  text-align: center;
+}
+
+/* 状态项样式 */
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.status-item:last-child {
+  border-bottom: none;
+}
+
+.status-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.status-value {
+  font-weight: 500;
+  color: #495057;
+}
+
+.status-value.connected {
+  color: #28a745;
+}
+
+.status-value.disconnected {
+  color: #dc3545;
+}
+
+/* 卡片样式 */
+.card {
+  background: var(--workspace-surface);
+  border: 1px solid var(--workspace-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--workspace-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: var(--workspace-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+/* 加载状态样式 */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 空状态样式 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.empty-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 1199px) {
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rag-workspace {
+    height: 100vh;
+  }
+  
+  .workspace-body {
+    flex-direction: column;
+  }
+  
+  .workspace-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    order: 2;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  
+  .workspace-main {
+    order: 1;
+    min-height: calc(100vh - 200px);
+  }
+  
+  .workspace-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .header-center {
+    order: 1;
+  }
+  
+  .header-left,
+  .header-right {
+    order: 2;
+  }
+  
+  .tab-navigation {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .tab-button {
+    justify-content: center;
+  }
+  
+  .workspace-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: none;
+    width: 100%;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .system-messages {
+    max-height: 40px;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .workspace-header,
+  .workspace-sidebar,
+  .workspace-footer {
+    display: none !important;
+  }
+  
+  .workspace-main {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .tab-button {
+    border: 2px solid currentColor;
+  }
+  
+  .tab-button.active {
+    border-color: #000;
+  }
+  
+  .status-indicator {
+    border: 1px solid currentColor;
+  }
+  
+  .action-btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  .tab-button,
+  .action-btn,
+  .progress-fill,
+  .message {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .spinner {
+    animation: none !important;
+  }
+  
+  .progress-fill::after {
+    animation: none !important;
+  }
+}

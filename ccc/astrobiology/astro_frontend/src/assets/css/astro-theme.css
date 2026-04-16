@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-space-black text-white font-sans antialiased overflow-x-hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-space-black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-white/20 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-white/30;
+    }
+}
+
+@layer components {
+    .glass-panel {
+        @apply bg-white/5 backdrop-blur-xl border border-glass-border shadow-2xl;
+    }
+
+    .glass-card {
+        @apply bg-[#1e2746]/30 backdrop-blur-md border border-glass-border transition-all duration-300 hover:bg-[#1e2746]/50 hover:border-nebula-purple/30 hover:-translate-y-1;
+    }
+
+    .text-gradient-astro {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-starlight-blue to-nebula-purple;
+    }
+}
+
+@layer utilities {
+
+    /* Enhanced Scroll Animations */
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .animate-scale-in {
+        animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        opacity: 0;
+    }
+
+    /* Glow effect */
+    .glow {
+        box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+    }
+
+    .glow-hover {
+        transition: box-shadow 0.3s ease;
+    }
+
+    .glow-hover:hover {
+        box-shadow: 0 0 30px rgba(108, 92, 231, 0.6), 0 0 50px rgba(0, 206, 201, 0.3);
+    }
+
+    /* Shimmer effect */
+    .shimmer {
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Override Element Plus Variables for Dark Theme */
+:root {
+    --el-color-primary: #6C5CE7;
+    --el-color-success: #00CEC9;
+    --el-color-warning: #FDCB6E;
+    --el-color-danger: #FF7675;
+    --el-color-info: #74B9FF;
+    --el-bg-color: #0B0D17;
+    --el-bg-color-overlay: #1e2746;
+    --el-text-color-primary: #ffffff;
+    --el-text-color-regular: rgba(255, 255, 255, 0.8);
+    --el-border-color: rgba(108, 92, 231, 0.15);
+    --el-border-color-light: rgba(108, 92, 231, 0.1);
+    --el-fill-color-blank: transparent;
+}
+
+/* Force Element Plus Dark Mode Overrides */
+.el-table,
+.el-table__expanded-cell {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.el-table th,
+.el-table tr {
+    background-color: transparent !important;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background-color: rgba(108, 92, 231, 0.1) !important;
+}
+
+.el-dialog,
+.el-message-box {
+    background: rgba(11, 13, 23, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(108, 92, 231, 0.2) !important;
+}

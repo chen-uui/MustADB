@@ -1,0 +1,1 @@
+Python代码风格建议基本遵循PEP8，类型提示可选但推荐关键API和核心模块采用typing注解。函数与类建议用docstring。推荐flake8做静态检查，black做格式化。前端建议使用ESLint做JS/TS语法检查，统一使用Prettier格式化，命名变量采用小驼峰，组件采用大驼峰命名法。

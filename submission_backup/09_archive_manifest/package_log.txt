@@ -1,0 +1,10 @@
+generated_at_utc=2026-04-09T03:01:09.406483+00:00
+project_root=D:\workspace\123
+backup_root=D:\workspace\123\submission_backup
+copied_file_count=172
+missing_source_count=0
+generated_entry_count=7
+zip_path=D:\workspace\123\submission_backup\submission_backup.zip
+
+[warnings]
+none

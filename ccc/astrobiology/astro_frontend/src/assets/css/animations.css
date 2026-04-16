@@ -1,0 +1,338 @@
+/* 淡入效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 从下方滑入 */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 从左侧滑入 */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 从右侧滑入 */
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 放大效果 */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 旋转进入 */
+@keyframes rotateIn {
+  from {
+    transform: rotate(-15deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* 悬浮效果 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 脉冲效果 */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 闪光效果 */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* 波纹效果 */
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(63, 187, 192, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(63, 187, 192, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(63, 187, 192, 0);
+  }
+}
+
+/* 应用动画的通用类 */
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s ease forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.8s ease forwards;
+}
+
+.animate-rotateIn {
+  animation: rotateIn 0.8s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* 带延迟的动画 */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+.delay-900 {
+  animation-delay: 0.9s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* 根据视口触发的动画 */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+}
+
+.slide-up-on-scroll {
+  transform: translateY(30px);
+}
+
+.slide-up-on-scroll.visible {
+  transform: translateY(0);
+}
+
+.slide-left-on-scroll {
+  transform: translateX(-30px);
+}
+
+.slide-left-on-scroll.visible {
+  transform: translateX(0);
+}
+
+.slide-right-on-scroll {
+  transform: translateX(30px);
+}
+
+.slide-right-on-scroll.visible {
+  transform: translateX(0);
+}
+
+.zoom-in-on-scroll {
+  transform: scale(0.95);
+}
+
+.zoom-in-on-scroll.visible {
+  transform: scale(1);
+}
+
+/* 特定元素动画 */
+.icon-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.shimmer-effect {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.ripple-effect:hover:after {
+  animation: ripple 1s ease-out;
+}
+
+/* Hero section background animation */
+.hero-bg-animation {
+  background-size: 400% 400% !important;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Button hover effects */
+.btn-animation {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-animation:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transition: all 0.5s ease;
+}
+
+.btn-animation:hover:before {
+  left: 100%;
+}
+
+/* Logo animation */
+.logo-animation {
+  transition: all 0.3s ease;
+}
+
+.logo-animation:hover {
+  text-shadow: 0 0 10px rgba(63, 187, 192, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Rotating icons */
+.rotate-icon {
+  transition: transform 0.5s ease;
+}
+
+.rotate-icon:hover {
+  transform: rotate(360deg);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

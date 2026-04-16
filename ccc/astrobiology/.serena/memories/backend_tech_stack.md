@@ -1,0 +1,1 @@
+后端基于Python 3.8+，核心框架为Django 5.2.1，采用djangorestframework开发API。集成openai和sentence-transformers用于大模型与向量检索，支持weaviate向量数据库。核心依赖还包括NumPy、pandas、scipy用于数据处理，PyMuPDF统一本地PDF解析。数据库优选PostgreSQL，部分API支持httpx、requests高效IO。开发工具包含pytest、black、flake8保障代码质量。

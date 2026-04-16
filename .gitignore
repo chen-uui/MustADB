@@ -1,0 +1,35 @@
+# 1. 彻底封杀所有数据文件和文档
+*.csv
+*.jsonl
+*.json
+*.xlsx
+*.pdf
+**/data/
+**/dataset/
+
+# 2. 彻底封杀模型、运行结果和媒体资源
+**/models/
+**/runs/
+**/media/
+**/uploads/
+
+# 3. 彻底封杀前端/后端庞大依赖与缓存
+node_modules/
+dist/
+build/
+.astro/
+__pycache__/
+*.py[cod]
+
+# 4. 彻底封杀虚拟环境
+venv/
+env/
+.venv/
+
+# 5. 封杀本地数据库和日志、隐私
+*.db
+*.sqlite3
+db.sqlite3
+*.log
+.env
+.env.*

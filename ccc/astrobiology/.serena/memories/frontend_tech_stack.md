@@ -1,0 +1,1 @@
+前端采用Vue 3.x全家桶（vue-router, vuex），UI库为Element Plus与Bootstrap，依赖AOS、axios、marked等增强用户体验。开发环境基于Node.js 16+，打包构建工具为Vite，代码风格建议遵循ESLint+Prettier，支持响应式与现代组件式开发模式。
