@@ -82,9 +82,3 @@ The main traceability entry points are:
 - `submission_backup/README.md`
 - `submission_backup/09_archive_manifest/paper_results_traceability.md`
 - `submission_backup/09_archive_manifest/missing_items.md`
-
-## Current Known Limits
-
-- The repository does not contain the full raw PDF corpus for copyright and size reasons.
-- Some benchmark construction inputs originally lived outside the repository and are documented as missing in `submission_backup/09_archive_manifest/missing_items.md`.
-- The archival Zenodo DOI is not yet included in `CITATION.cff` and can be added after the first GitHub release is archived.
