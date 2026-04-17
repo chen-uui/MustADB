@@ -1,0 +1,7 @@
+mode,alpha,collection_name,Recall@5,MRR@5,nDCG@5,k,notes
+bm25,NA,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.1833,0.2833,0.1875,5,sparse baseline on full-corpus 700/80 with doc-level evaluator
+dense,NA,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6583,0.6583,0.5731,5,dense baseline on full-corpus 700/80 with doc-level evaluator
+hybrid,0.7,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6167,0.6083,0.5094,5,hybrid without reranking
+hybrid,0.9,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6167,0.6250,0.5225,5,hybrid without reranking
+hybrid_rerank,0.7,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6833,0.5783,0.5173,5,main reranked hybrid candidate
+hybrid_rerank,0.9,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6833,0.5783,0.5173,5,main reranked hybrid candidate; tied with alpha 0.7 in this paper-ready run

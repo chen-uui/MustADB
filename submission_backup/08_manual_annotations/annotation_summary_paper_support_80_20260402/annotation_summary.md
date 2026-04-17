@@ -1,6 +1,6 @@
 # QA Annotation Summary
 
-- Input CSV: `C:\Users\19404\Downloads\qa_annotation_samples_80_annotated.csv`
+- Input CSV: `external/Downloads/qa_annotation_samples_80_annotated.csv`
 - Total rows: `80`
 
 ## Metric Definitions

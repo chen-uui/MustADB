@@ -1,0 +1,5 @@
+mode,supported,partially_supported,unsupported,unclear
+bm25,7,11,2,0
+dense,6,12,2,0
+hybrid,5,12,3,0
+hybrid_rerank,3,17,0,0

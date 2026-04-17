@@ -1,0 +1,3 @@
+mode,hybrid_alpha,n_queries,n_qrels,recall_at_k,mrr_at_k,ndcg_at_k,k,n_queries_total,n_queries_skipped_no_relevant
+bm25,,10,20,0.1833,0.2833,0.1875,5,10,0
+dense,,10,20,0.6583,0.6583,0.5731,5,10,0

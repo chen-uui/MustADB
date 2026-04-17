@@ -1,0 +1,5 @@
+mode,N,answer_accuracy_n,answer_accuracy_pct,supported_n,supported_pct,partially_supported_n,partially_supported_pct,unsupported_n,unsupported_pct,unclear_support_n,unclear_support_pct
+bm25,20,16,80.0%,7,35.0%,11,55.0%,2,10.0%,0,0.0%
+dense,20,16,80.0%,6,30.0%,12,60.0%,2,10.0%,0,0.0%
+hybrid,20,14,70.0%,5,25.0%,12,60.0%,3,15.0%,0,0.0%
+hybrid_rerank,20,17,85.0%,3,15.0%,17,85.0%,0,0.0%,0,0.0%

@@ -1,6 +1,6 @@
 # Batch2 Final Summary
 
-- annotated_xlsx: `C:\Users\19404\Downloads\batch2_review_candidates_annotated.xlsx`
+- annotated_xlsx: `external/Downloads/batch2_review_candidates_annotated.xlsx`
 - core_final_added_count: `1`
 - supporting_final_added_count: `5`
 - excluded_count: `6`

@@ -1,0 +1,13 @@
+mode,alpha,n_queries,metric,point_estimate,ci_lower,ci_upper,bootstrap_n,bootstrap_unit,ci_method,source_details_csv
+bm25,NA,10,recall_at_5,0.1833,0.0500,0.3333,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+bm25,NA,10,mrr_at_5,0.2833,0.0500,0.5500,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+bm25,NA,10,ndcg_at_5,0.1875,0.0414,0.3535,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+dense,NA,10,recall_at_5,0.6583,0.4750,0.8333,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+dense,NA,10,mrr_at_5,0.6583,0.4083,0.8750,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+dense,NA,10,ndcg_at_5,0.5731,0.3996,0.7405,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\bm25_dense\retrieval_quality_details.csv
+hybrid,0.7,10,recall_at_5,0.6167,0.3833,0.8338,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv
+hybrid,0.7,10,mrr_at_5,0.6083,0.3500,0.8583,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv
+hybrid,0.7,10,ndcg_at_5,0.5094,0.3179,0.6983,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv
+hybrid_rerank,0.7,10,recall_at_5,0.6833,0.4833,0.8667,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv
+hybrid_rerank,0.7,10,mrr_at_5,0.5783,0.3567,0.8083,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv
+hybrid_rerank,0.7,10,ndcg_at_5,0.5173,0.3664,0.6681,2000,query,percentile,backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix\hybrid_alpha_0p7\retrieval_quality_details.csv

@@ -1,0 +1,5 @@
+mode,correct,incorrect,unclear
+bm25,16,4,0
+dense,16,4,0
+hybrid,14,6,0
+hybrid_rerank,17,3,0

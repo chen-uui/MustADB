@@ -1,0 +1,4 @@
+comparison,mode,collection_name,n_queries,metric,point_difference,ci_lower,ci_upper,ci_crosses_zero,bootstrap_n,bootstrap_unit,ci_method
+alpha_0.7 - alpha_0.9,hybrid_rerank,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,10,recall_at_5,0.0000,0.0000,0.0000,yes,2000,paired_query,percentile
+alpha_0.7 - alpha_0.9,hybrid_rerank,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,10,mrr_at_5,0.0000,0.0000,0.0000,yes,2000,paired_query,percentile
+alpha_0.7 - alpha_0.9,hybrid_rerank,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,10,ndcg_at_5,0.0000,0.0000,0.0000,yes,2000,paired_query,percentile

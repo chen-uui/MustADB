@@ -1,0 +1,25 @@
+{
+  "annotated_xlsx": "C:\\Users\\19404\\Downloads\\batch2_review_candidates_annotated.xlsx",
+  "core_final_added_count": 1,
+  "supporting_final_added_count": 5,
+  "core_titles": [
+    "Concentration and variability of the AIB amino acid in polar micrometeorites: Implications for the exogenous delivery of amino acids to the primitive Earth"
+  ],
+  "supporting_titles": [
+    "Amino acids on witness coupons collected from the ISASJAXA curation facility for the assessment and quality control of the Hayabusa2 sampling procedure",
+    "Abiotic formation of alkylsulfonic acids in interstellar analog ices and implications for their detection on Ryugu",
+    "Reanalysis of the Viking results suggests perchlorate and organics at midlatitudes on Mars",
+    "Concerns of Organic Contamination for Sample Return Space Missions",
+    "Oxygen-bearing organic molecules in comet 67Ps dusty coma: First evidence for abundant heterocycles"
+  ],
+  "excluded_titles": [
+    "Tracing early life on Mars: lessons from organics produced in high-altitude hotsprings of Ladakh",
+    "Origin of Life on Mars: Suitability and Opportunities , Vera M. Kolb 2, Andrew Steele 3, Christopher H. House 4 , Nina L. Lanza 5, and Jesús Martínez-Frías 8 Steele, A.; House, ...",
+    "The Fate of Lipid Biosignatures in a Mars-Analogue Sulfur Stream",
+    "Experimental determination of photostability and fluorescencebased detection of PAHs on the Martian surface",
+    "New Paths for Survivability of Organic Material in the Martian Subsurface",
+    "Effects of Pressure on Model Compounds of Meteorite Organic Matter"
+  ],
+  "excluded_count": 6,
+  "strict_rule": "Selection used only annotated in_scope, scope_type, review_priority, recommendation, and notes. gold_* values were copied exactly from annotated rows without any fallback."
+}

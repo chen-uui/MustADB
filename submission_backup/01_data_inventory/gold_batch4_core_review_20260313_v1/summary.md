@@ -1,7 +1,7 @@
 # Batch4 Core Review Summary
 
-- gold_v3_csv: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed_v3.csv`
-- supporting_final_csv: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_batch2_final_annotated_20260313_v1\gold_seed_batch2_supporting_final.csv`
+- gold_v3_csv: `backend/evaluation/gold_seed_v3.csv`
+- supporting_final_csv: `backend/runs/gold_batch2_final_annotated_20260313_v1\gold_seed_batch2_supporting_final.csv`
 - metadata_pool_count: `5`
 - selected_count: `4`
 - review_first_count: `2`

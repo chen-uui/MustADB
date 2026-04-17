@@ -3,8 +3,8 @@ import shutil
 from collections import OrderedDict
 from pathlib import Path
 from pdf_processor.models import PDFDocument
-qrels = Path(r"D:\workspace\123\ccc\astrobiology\backend\evaluation\retrieval_qrels_seed.csv")
-out_dir = Path(r"D:\workspace\123\ccc\astrobiology\backend\runs\chunk_sanity_input_qrels_20260402")
+qrels = Path(r"backend/evaluation/retrieval_qrels_seed.csv")
+out_dir = Path(r"backend/runs/chunk_sanity_input_qrels_20260402")
 out_dir.mkdir(parents=True, exist_ok=True)
 ids = OrderedDict()
 with qrels.open('r', encoding='utf-8-sig', newline='') as f:

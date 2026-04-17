@@ -30,7 +30,7 @@ This inventory records the main experiment assets found during the scan and the 
   `ccc/astrobiology/backend/runs/annotation_pack_paper_support_80samples_20260402_doclevel_fix/`
   `ccc/astrobiology/backend/runs/annotation_summary_paper_support_80_20260402/`
 - Important note:
-  `annotation_summary.md` points to an annotated CSV in `C:\Users\19404\Downloads\qa_annotation_samples_80_annotated.csv`, which is not stored inside the repository.
+  `annotation_summary.md` points to an annotated CSV in `external/Downloads/qa_annotation_samples_80_annotated.csv`, which is not stored inside the repository.
 
 ## D. Extraction Benchmark and Evaluation Assets
 

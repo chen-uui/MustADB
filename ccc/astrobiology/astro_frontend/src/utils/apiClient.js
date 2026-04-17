@@ -14,14 +14,16 @@ const apiClient = axios.create({
   }
 })
 
-const DEV_TOKEN = 'c7808553361817594a38e375f8aec670230fc253'
-
 const getAuthToken = () => {
   const stored = typeof window !== 'undefined' ? window.localStorage.getItem('token') : null
   if (stored && stored.trim() !== '') {
     return stored
   }
-  return DEV_TOKEN
+  const envToken = import.meta.env.VITE_DEV_BEARER_TOKEN
+  if (envToken && String(envToken).trim() !== '') {
+    return envToken
+  }
+  return null
 }
 
 apiClient.interceptors.request.use(

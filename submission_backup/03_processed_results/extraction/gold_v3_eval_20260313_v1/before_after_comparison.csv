@@ -1,0 +1,5 @@
+field,v2_total_rows,v2_evaluated_rows,v2_skipped_rows,v2_precision,v2_recall,v2_f1,v3_total_rows,v3_evaluated_rows,v3_skipped_rows,v3_precision,v3_recall,v3_f1,delta_precision,delta_recall,delta_f1
+meteorite_name,22,18,4,0.6667,0.8333,0.7407,23,19,4,0.5556,0.7692,0.6452,-0.1111,-0.0641,-0.0955
+organic_compounds,22,18,4,0.5733,0.9149,0.7049,23,19,4,0.4839,0.9184,0.6338,-0.0894,0.0035,-0.0711
+contamination_controls,22,18,4,0.2069,0.5455,0.3000,23,19,4,0.5882,0.9091,0.7143,0.3813,0.3636,0.4143
+overall_macro_avg,22,18,4,0.4823,0.7646,0.5819,23,19,4,0.5426,0.8656,0.6644,0.0603,0.1010,0.0825

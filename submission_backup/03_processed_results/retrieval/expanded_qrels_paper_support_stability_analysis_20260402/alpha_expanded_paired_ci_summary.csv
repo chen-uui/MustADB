@@ -1,0 +1,4 @@
+comparison,metric,difference,ci_lower,ci_upper,crosses_zero
+alpha_0.7 - alpha_0.9,Recall@5,0.0000,0.0000,0.0000,yes
+alpha_0.7 - alpha_0.9,MRR@5,0.0000,0.0000,0.0000,yes
+alpha_0.7 - alpha_0.9,nDCG@5,0.0000,0.0000,0.0000,yes

@@ -1,0 +1,7 @@
+category,baseline_count,prior_class_count,improved_count
+field_empty_or_missing,1,0,0
+missed_extraction,2,4,2
+wrong_extraction,7,7,3
+over_broad_or_generalized,1,1,5
+normalization_or_projection_issue,0,7,6
+duplicate_or_conflict,1,1,3

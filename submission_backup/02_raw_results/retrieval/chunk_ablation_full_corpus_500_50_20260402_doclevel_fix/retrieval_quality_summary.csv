@@ -1,0 +1,2 @@
+mode,hybrid_alpha,n_queries,n_qrels,recall_at_k,mrr_at_k,ndcg_at_k,k,n_queries_total,n_queries_skipped_no_relevant
+hybrid_rerank,0.7000,10,20,0.4500,0.4667,0.4113,5,10,0

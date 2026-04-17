@@ -1,0 +1,5 @@
+mode,alpha,collection_name,Recall@5,Recall@5_95CI,MRR@5,MRR@5_95CI,nDCG@5,nDCG@5_95CI,k
+bm25,NA,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.1917,"[0.1000, 0.2792]",0.4083,"[0.2167, 0.6002]",0.2227,"[0.1196, 0.3301]",5
+dense,NA,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.5842,"[0.4650, 0.7017]",0.8042,"[0.6542, 0.9250]",0.5879,"[0.4723, 0.6856]",5
+hybrid,0.7,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.5742,"[0.4458, 0.6950]",0.7708,"[0.6083, 0.9167]",0.5648,"[0.4530, 0.6692]",5
+hybrid_rerank,0.7,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,0.6033,"[0.4833, 0.7150]",0.7392,"[0.5924, 0.8851]",0.5562,"[0.4615, 0.6462]",5

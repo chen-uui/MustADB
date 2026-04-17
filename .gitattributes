@@ -1,0 +1,12 @@
+.serena export-ignore
+.trae export-ignore
+_archive export-ignore
+docs/reports export-ignore
+ccc/astrobiology/.serena export-ignore
+ccc/astrobiology/.vscode export-ignore
+ccc/astrobiology/backend/tmp_smoke export-ignore
+ccc/astrobiology/backend/tmp_validation export-ignore
+ccc/astrobiology/backend/tmp_* export-ignore
+ccc/astrobiology/astro_frontend/tmp_* export-ignore
+submission_backup/submission_backup.zip export-ignore
+submission_backup/09_archive_manifest/package_summary.json export-ignore

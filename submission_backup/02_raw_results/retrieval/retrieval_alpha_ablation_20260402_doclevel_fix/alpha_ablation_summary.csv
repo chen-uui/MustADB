@@ -1,0 +1,9 @@
+alpha,mode,n_queries,n_qrels,recall_at_k,mrr_at_k,ndcg_at_k,k,n_queries_total,n_queries_skipped_no_relevant,run_dir
+0.3000,hybrid,10,20,0.8167,0.6417,0.6526,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p3000
+0.3000,hybrid_rerank,10,20,0.9250,0.7167,0.7219,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p3000
+0.5000,hybrid,10,20,0.8167,0.6417,0.6526,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p5000
+0.5000,hybrid_rerank,10,20,0.9750,0.7167,0.7456,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p5000
+0.7000,hybrid,10,20,0.8167,0.6417,0.6526,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p7000
+0.7000,hybrid_rerank,10,20,0.9750,0.7167,0.7605,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p7000
+0.9000,hybrid,10,20,0.8167,0.6417,0.6526,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p9000
+0.9000,hybrid_rerank,10,20,0.9750,0.7417,0.7806,5,10,0,backend/runs/retrieval_alpha_ablation_20260402_doclevel_fix\alpha_0p9000

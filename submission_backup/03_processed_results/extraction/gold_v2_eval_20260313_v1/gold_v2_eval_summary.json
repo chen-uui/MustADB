@@ -1,0 +1,40 @@
+{
+  "base_gold": "backend/evaluation/gold_seed.csv",
+  "batch_gold": "backend/runs/gold_batch1_final_20260313_v1\\gold_seed_batch1_final.csv",
+  "base_fixed_csv": "backend/runs/gold_raw_recall_20260312_v2\\raw_recall_improved\\gold_seed_rerun.csv",
+  "gold_seed_v2_csv": "backend/evaluation/gold_seed_v2.csv",
+  "gold_seed_v2_xlsx": "backend/evaluation/gold_seed_v2.xlsx",
+  "gold_seed_v2_fixed_eval_input_csv": "backend/runs/gold_v2_eval_20260313_v1\\gold_seed_v2_fixed_eval_input.csv",
+  "gold_seed_v2_fixed_eval_input_xlsx": "backend/runs/gold_v2_eval_20260313_v1\\gold_seed_v2_fixed_eval_input.xlsx",
+  "merged_total_rows": 22,
+  "base_total_rows": 15,
+  "batch_appended_rows": 7,
+  "duplicate_count": 0,
+  "duplicate_rows": [],
+  "fixed_eval_duplicate_count": 0,
+  "fixed_eval_duplicate_rows": [],
+  "batch1_formally_included": [
+    "Indigenous OrganicOxidized Fluid Interactions in the Tissint Mars Meteorite",
+    "Investigating the impact of xray computed tomography imaging on soluble organic matter in the Murchison meteorite: Implications for Bennu sample analyses",
+    "Extraterrestrial ribose and other sugars in primitive meteorites",
+    "Molecular distribution and 13C isotope composition of volatile organic compounds in the Murchison and Sutters Mill carbonaceous chondrites",
+    "Extraterrestrial hexamethylenetetramine Yasuhiro Oba",
+    "High-spatial resolution functional chemistry of nitrogen compounds in the observed UK meteorite fall Winchcombe",
+    "Speciation of organosulfur compounds in carbonaceous chondrites"
+  ],
+  "old_eval": {
+    "total_rows": "15",
+    "evaluated_rows": "11",
+    "skipped_rows": "4",
+    "coverage_rate": "0.7333"
+  },
+  "new_eval": {
+    "total_rows": "22",
+    "evaluated_rows": "18",
+    "skipped_rows": "4",
+    "coverage_rate": "0.8182"
+  },
+  "comparison_csv": "backend/runs/gold_v2_eval_20260313_v1\\before_after_comparison.csv",
+  "old_eval_dir": "backend/runs/gold_v2_eval_20260313_v1\\old_gold_fixed_eval",
+  "new_eval_dir": "backend/runs/gold_v2_eval_20260313_v1\\new_gold_v2_fixed_eval"
+}

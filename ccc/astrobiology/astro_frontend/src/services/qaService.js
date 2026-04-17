@@ -2,8 +2,6 @@ import { apiMethods } from '@/utils/apiClient'
 import { API_CONFIG } from '@/config/api'
 import { extractApiError } from '@/utils/apiError'
 
-const STREAM_FALLBACK_TOKEN = 'c7808553361817594a38e375f8aec670230fc253'
-
 class QAService {
   async askQuestion(params, endpoint = 'QA_ASK', signal = null) {
     let data
@@ -33,13 +31,15 @@ class QAService {
   async askQuestionStream(data, endpointUrl, signal = null) {
     try {
       const token =
-        (typeof window !== 'undefined' && window.localStorage.getItem('token')) || STREAM_FALLBACK_TOKEN
+        (typeof window !== 'undefined' && window.localStorage.getItem('token')) ||
+        import.meta.env.VITE_DEV_BEARER_TOKEN ||
+        ''
 
       const response = await fetch(`${API_CONFIG.BASE_URL}${endpointUrl}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
+          ...(token ? { Authorization: `Bearer ${token}` } : {})
         },
         body: JSON.stringify(data),
         signal

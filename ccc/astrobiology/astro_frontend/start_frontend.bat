@@ -1,5 +1,7 @@
 @echo off
-echo 🚀 启动Vue前端开发服务器...
-cd /d "d:\workspace\123\ccc\astrobiology\astro_frontend"
-npm.cmd run dev -- --port 5173
+setlocal
+cd /d "%~dp0"
+if "%FRONTEND_PORT%"=="" set "FRONTEND_PORT=5173"
+echo Starting Vite frontend on port %FRONTEND_PORT%
+npm.cmd run dev -- --port %FRONTEND_PORT%
 pause

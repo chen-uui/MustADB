@@ -1,0 +1,5 @@
+field,total_rows,evaluated_rows,skipped_rows,coverage_rate,n_samples,precision,recall,f1,matching_rule
+meteorite_name,15,11,4,0.7333,9,0.8750,0.8750,0.8750,case-insensitive exact match (trim); empty-empty ignored
+contamination_controls,15,11,4,0.7333,8,0.1852,0.5000,0.2703,lowercase+trim; normalize comma/semicolon separators; parse Python/JSON list-string; token-set micro P/R/F1 by overlap; empty-empty ignored
+organic_compounds,15,11,4,0.7333,9,0.3000,0.6667,0.4138,shared organic canonicalization via ExtractionFieldPostprocessor; token-set micro P/R/F1 by overlap; empty-empty ignored
+overall_macro_avg,15,11,4,0.7333,26,0.4534,0.6806,0.5197,macro average over fields with n_samples>0

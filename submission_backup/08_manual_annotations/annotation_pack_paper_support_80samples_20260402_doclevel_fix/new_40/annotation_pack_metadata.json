@@ -1,0 +1,29 @@
+{
+  "qrels_path": "backend/runs/annotation_pack_paper_support_80samples_20260402_doclevel_fix\\query_subset_q011_q020.csv",
+  "collection_name": "PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix",
+  "configs": [
+    {
+      "mode": "bm25",
+      "alpha": null
+    },
+    {
+      "mode": "dense",
+      "alpha": null
+    },
+    {
+      "mode": "hybrid",
+      "alpha": 0.7
+    },
+    {
+      "mode": "hybrid_rerank",
+      "alpha": 0.7
+    }
+  ],
+  "top_k": 5,
+  "rerank_k": 10,
+  "max_evidence_snippets": 3,
+  "snippet_char_limit": 500,
+  "n_queries": 10,
+  "n_samples": 40,
+  "generated_at": "2026-04-02T16:53:47.386518"
+}

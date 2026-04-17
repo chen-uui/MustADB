@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript and this software release when using this repository."
+title: "MustADB"
+type: software
+abstract: "Public release of the MustADB astrobiology literature retrieval and extraction system, plus curated manuscript-traceability artifacts."
+authors:
+  - family-names: "Chen"
+    given-names: "Bohan"
+  - family-names: "Lai"
+    given-names: "Jialong"
+  - family-names: "Huang"
+    given-names: "Ting"
+  - family-names: "Zou"
+    given-names: "Zhengyang"
+  - family-names: "Zhao"
+    given-names: "Yong"
+  - family-names: "Fernandez-Remolar"
+    given-names: "David Carlos"
+license: "Apache-2.0"
+repository-code: "https://github.com/chen-uui/MustADB"
+url: "https://github.com/chen-uui/MustADB"
+version: "v2.0.0"
+date-released: "2026-04-17"
+keywords:
+  - astrobiology
+  - meteorites
+  - information retrieval
+  - benchmark traceability
+  - scientific text mining

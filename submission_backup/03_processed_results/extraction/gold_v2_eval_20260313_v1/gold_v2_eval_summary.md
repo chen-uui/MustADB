@@ -1,9 +1,9 @@
 # Gold V2 Evaluation Summary
 
-- base_gold: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed.csv`
-- batch_gold: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_batch1_final_20260313_v1\gold_seed_batch1_final.csv`
-- gold_seed_v2_csv: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed_v2.csv`
-- gold_seed_v2_xlsx: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed_v2.xlsx`
+- base_gold: `backend/evaluation/gold_seed.csv`
+- batch_gold: `backend/runs/gold_batch1_final_20260313_v1\gold_seed_batch1_final.csv`
+- gold_seed_v2_csv: `backend/evaluation/gold_seed_v2.csv`
+- gold_seed_v2_xlsx: `backend/evaluation/gold_seed_v2.xlsx`
 - merged_total_rows: `22`
 - base_total_rows: `15`
 - batch_appended_rows: `7`

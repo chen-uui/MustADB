@@ -1,10 +1,10 @@
 # Gold V3 Evaluation Summary
 
-- gold_v2: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed_v2.csv`
-- gold_v3: `D:\workspace\123\ccc\astrobiology\backend\evaluation\gold_seed_v3.csv`
-- v2_summary: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_v2_eval_20260313_v1\new_gold_v2_fixed_eval\accuracy_summary.csv`
-- v3_eval_dir: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_v3_eval_20260313_v1\gold_v3_eval`
-- comparison_csv: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_v3_eval_20260313_v1\before_after_comparison.csv`
+- gold_v2: `backend/evaluation/gold_seed_v2.csv`
+- gold_v3: `backend/evaluation/gold_seed_v3.csv`
+- v2_summary: `backend/runs/gold_v2_eval_20260313_v1\new_gold_v2_fixed_eval\accuracy_summary.csv`
+- v3_eval_dir: `backend/runs/gold_v3_eval_20260313_v1\gold_v3_eval`
+- comparison_csv: `backend/runs/gold_v3_eval_20260313_v1\before_after_comparison.csv`
 
 ## v2 to v3 New Addition
 - Concentration and variability of the AIB amino acid in polar micrometeorites: Implications for the exogenous delivery of amino acids to the primitive Earth

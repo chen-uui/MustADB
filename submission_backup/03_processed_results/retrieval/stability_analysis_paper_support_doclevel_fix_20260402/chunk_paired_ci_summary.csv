@@ -1,0 +1,7 @@
+comparison,baseline_config,compare_config,mode,alpha,n_queries,metric,point_difference,ci_lower,ci_upper,ci_crosses_zero,bootstrap_n,bootstrap_unit,ci_method
+700:80 - 500:50,700:80,500:50,hybrid_rerank,0.7,10,recall_at_5,0.2333,0.0000,0.5000,yes,2000,paired_query,percentile
+700:80 - 500:50,700:80,500:50,hybrid_rerank,0.7,10,mrr_at_5,0.1117,-0.1386,0.3367,yes,2000,paired_query,percentile
+700:80 - 500:50,700:80,500:50,hybrid_rerank,0.7,10,ndcg_at_5,0.1060,-0.0943,0.2927,yes,2000,paired_query,percentile
+700:80 - 900:100,700:80,900:100,hybrid_rerank,0.7,10,recall_at_5,0.0667,-0.1500,0.3338,yes,2000,paired_query,percentile
+700:80 - 900:100,700:80,900:100,hybrid_rerank,0.7,10,mrr_at_5,0.1083,-0.1634,0.4250,yes,2000,paired_query,percentile
+700:80 - 900:100,700:80,900:100,hybrid_rerank,0.7,10,ndcg_at_5,0.0275,-0.1850,0.2532,yes,2000,paired_query,percentile

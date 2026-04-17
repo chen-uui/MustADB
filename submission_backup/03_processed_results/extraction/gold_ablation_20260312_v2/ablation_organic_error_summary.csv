@@ -1,0 +1,7 @@
+category,baseline_count,prompt_only_count,field_specific_count
+field_empty_or_missing,1,1,1
+missed_extraction,2,4,5
+wrong_extraction,7,9,6
+over_broad_or_generalized,1,0,1
+normalization_error,0,0,0
+duplicate_or_conflict,1,1,1

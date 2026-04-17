@@ -6,8 +6,8 @@ This file lists gaps or ambiguities that matter for auditability and later repro
 
 - No LaTeX source, Word source, or `.bib` file for the current manuscript was found during the repository scan.
 - No clearly named supplementary-material source package tied to the current submission was found.
-- The manual-evaluation summary points to `C:\Users\19404\Downloads\qa_annotation_samples_80_annotated.csv`, but that annotated source CSV is not stored in this repository.
-- The batch-2 benchmark summary points to `C:\Users\19404\Downloads\batch2_review_candidates_annotated.xlsx`, but that annotated source XLSX is not stored in this repository.
+- The manual-evaluation summary points to `external/Downloads/qa_annotation_samples_80_annotated.csv`, but that annotated source CSV is not stored in this repository.
+- The batch-2 benchmark summary points to `external/Downloads/batch2_review_candidates_annotated.xlsx`, but that annotated source XLSX is not stored in this repository.
 
 ## Version Ambiguity
 

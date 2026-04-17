@@ -65,13 +65,6 @@ def group_entries(
 
 COPY_ENTRIES: list[ArchiveEntry] = [
     entry(
-        "ccc/astrobiology/data/pdfs/Astrobiology Manuscript Revised.pdf",
-        "00_manuscript/Astrobiology Manuscript Revised.pdf",
-        "Final manuscript PDF found in the repository.",
-        "Current submission manuscript.",
-        "manuscript",
-    ),
-    entry(
         "ccc/astrobiology/backend/evaluation/queries.jsonl",
         "04_eval_benchmarks/retrieval/queries.jsonl",
         "Retrieval query set used as the base question inventory.",
@@ -709,19 +702,20 @@ def copy_sources(entries: list[ArchiveEntry]) -> tuple[list[dict[str, str]], lis
 
         source_path = (PROJECT_ROOT / archive_entry.source_rel).resolve()
         dest_path = (BACKUP_ROOT / archive_entry.dest_rel).resolve()
+        display_source = archive_entry.source_rel
         ensure_parent(dest_path)
 
         status = "copied"
         if not source_path.exists():
             status = "missing_source"
-            warnings.append(f"MISSING: {source_path}")
+            warnings.append(f"MISSING: {display_source}")
         else:
             shutil.copy2(source_path, dest_path)
 
         copied_rows.append(
             {
                 "archive_path": archive_entry.dest_rel,
-                "source_path": str(source_path),
+                "source_path": display_source,
                 "purpose": archive_entry.purpose,
                 "paper_relation": archive_entry.paper_relation,
                 "stage": archive_entry.stage,
@@ -775,12 +769,12 @@ def write_logs(
 ) -> None:
     summary = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "project_root": str(PROJECT_ROOT),
-        "backup_root": str(BACKUP_ROOT),
+        "project_root": ".",
+        "backup_root": "submission_backup",
         "copied_file_count": sum(1 for row in copied_rows if row["status"] == "copied"),
         "missing_source_count": sum(1 for row in copied_rows if row["status"] == "missing_source"),
         "generated_entry_count": len(generated_rows),
-        "zip_path": str(zip_path) if zip_path else None,
+        "zip_path": f"submission_backup/{zip_path.name}" if zip_path else None,
         "warnings": warnings,
     }
     (MANIFEST_DIR / "package_summary.json").write_text(
@@ -790,8 +784,8 @@ def write_logs(
 
     log_lines = [
         f"generated_at_utc={summary['generated_at_utc']}",
-        f"project_root={PROJECT_ROOT}",
-        f"backup_root={BACKUP_ROOT}",
+        "project_root=.",
+        "backup_root=submission_backup",
         f"copied_file_count={summary['copied_file_count']}",
         f"missing_source_count={summary['missing_source_count']}",
         f"generated_entry_count={summary['generated_entry_count']}",
@@ -811,6 +805,8 @@ def build_zip(zip_name: str) -> Path:
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as handle:
         for path in sorted(BACKUP_ROOT.rglob("*")):
             if path.is_dir() or path == zip_path:
+                continue
+            if path.relative_to(BACKUP_ROOT).parts[:1] == ("00_manuscript",):
                 continue
             handle.write(path, arcname=path.relative_to(BACKUP_ROOT))
     return zip_path

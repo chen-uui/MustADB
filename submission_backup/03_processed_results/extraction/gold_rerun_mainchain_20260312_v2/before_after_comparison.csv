@@ -1,0 +1,5 @@
+field,baseline_precision,baseline_recall,baseline_f1,baseline_n_samples,rerun_precision,rerun_recall,rerun_f1,rerun_n_samples,delta_precision,delta_recall,delta_f1
+meteorite_name,0.7000,0.8750,0.7778,10,0.7143,0.6250,0.6667,9,0.0143,-0.2500,-0.1111
+organic_compounds,0.2188,0.7778,0.3415,11,0.1429,0.5556,0.2273,10,-0.0759,-0.2222,-0.1142
+contamination_controls,1.0000,0.9000,0.9474,4,0.0000,0.0000,0.0000,4,-1.0000,-0.9000,-0.9474
+overall_macro_avg,0.6396,0.8509,0.6889,25,0.2857,0.3935,0.2980,23,-0.3539,-0.4574,-0.3909

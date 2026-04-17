@@ -1,6 +1,6 @@
 # Gold Batch1 Final Summary
 
-- input_csv: `D:\workspace\123\ccc\astrobiology\backend\runs\gold_batch1_review_20260313_v1\gold_seed_batch1.csv`
+- input_csv: `backend/runs/gold_batch1_review_20260313_v1\gold_seed_batch1.csv`
 - finalized_count: `7`
 
 ## Finalized Documents

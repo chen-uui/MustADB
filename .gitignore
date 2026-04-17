@@ -1,35 +1,67 @@
-# 1. 彻底封杀所有数据文件和文档
-*.csv
-*.jsonl
-*.json
-*.xlsx
-*.pdf
-**/data/
-**/dataset/
+# Local environments and editor state
+.venv/
+.serena/
+.trae/
+.vscode/
+*.code-workspace
 
-# 2. 彻底封杀模型、运行结果和媒体资源
-**/models/
-**/runs/
-**/media/
-**/uploads/
-
-# 3. 彻底封杀前端/后端庞大依赖与缓存
-node_modules/
-dist/
-build/
-.astro/
+# Python build and cache artifacts
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# 4. 彻底封杀虚拟环境
-venv/
-env/
-.venv/
+# Node / frontend build artifacts
+node_modules/
+dist/
+dist-ssr/
+build/
+.astro/
 
-# 5. 封杀本地数据库和日志、隐私
-*.db
-*.sqlite3
-db.sqlite3
-*.log
+# Local runtime configuration
 .env
-.env.*
+.env.local
+.env.*.local
+!.env.example
+
+# Logs and local databases
+*.log
+*.sqlite3
+*.db
+
+# Archived/internal working areas
+_archive/
+
+# Runtime data that should not ship in the public release
+ccc/astrobiology/data/
+ccc/astrobiology/backend/media/
+ccc/astrobiology/backend/uploads/
+ccc/astrobiology/backend/staticfiles/
+ccc/astrobiology/backend/models/
+ccc/astrobiology/backend/logs/
+ccc/astrobiology/logs/
+logs/
+
+# Local benchmark workspaces retained only in the live environment
+ccc/astrobiology/backend/runs/
+ccc/astrobiology/backend/evaluation/
+ccc/astrobiology/checkpoints/
+ccc/astrobiology/backend/tmp_*
+ccc/astrobiology/backend/tmp_smoke/*
+ccc/astrobiology/backend/tmp_validation/*
+ccc/astrobiology/backend/incremental_extraction_progress.json
+ccc/astrobiology/backend/pdf_processor/answer_cache.json
+ccc/astrobiology/backend/pdf_processor/nwa7034_answer.json
+
+# Keep the curated manuscript evidence bundle visible to git.
+!submission_backup/
+!submission_backup/**
+
+# Generated release archives
+MustADB-public-release-*.zip
+submission_backup/00_manuscript/
+submission_backup/submission_backup.zip
+submission_backup/09_archive_manifest/package_summary.json

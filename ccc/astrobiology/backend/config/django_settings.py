@@ -112,7 +112,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': get_env_var('DB_NAME', 'astrobiology_db'),
         'USER': get_env_var('DB_USER', 'postgres'),
-        'PASSWORD': get_env_var('DB_PASSWORD', '123456'),
+        'PASSWORD': get_env_var('DB_PASSWORD', ''),
         'HOST': get_env_var('DB_HOST', 'localhost'),
         'PORT': get_env_var('DB_PORT', '5432'),
         'CONN_MAX_AGE': int(get_env_var('DB_CONN_MAX_AGE', '60')),  # 允许连接复用，减少频繁握手
@@ -280,7 +280,7 @@ LOGGING = {
 # 自定义配置
 # OpenAI配置
 OPENAI_CONFIG = {
-    'API_KEY': get_env_var('OPENAI_API_KEY', 'sk-placeholder-key-for-development', required=True),
+    'API_KEY': get_env_var('OPENAI_API_KEY', '', required=False),
     'MODEL': get_env_var('OPENAI_MODEL', 'gpt-3.5-turbo'),
     'MAX_TOKENS': int(get_env_var('OPENAI_MAX_TOKENS', '1000')),
     'TEMPERATURE': float(get_env_var('OPENAI_TEMPERATURE', '0.7')),

@@ -11,7 +11,7 @@ This package is a curated backup for the PNAS Nexus submission materials in this
 
 ## Directory Guide
 
-- `00_manuscript/`: manuscript file found in-repo.
+- `00_manuscript/`: optional local-only manuscript staging area. It is excluded from the default public git-tracked release and from the default generated archive.
 - `01_data_inventory/`: benchmark provenance and inventory notes.
 - `02_raw_results/`: selected raw or near-raw result files from retrieval and extraction runs.
 - `03_processed_results/`: summaries, comparison tables, and CI outputs.
@@ -45,8 +45,10 @@ This package is a curated backup for the PNAS Nexus submission materials in this
 
 ## Current Completeness
 
-- Present in the repo and archived here:
-  manuscript PDF, retrieval benchmark files, expanded qrels artifacts, manual-eval pack and summaries, gold benchmark v1/v2/v3 assets, major extraction comparison runs, management commands, and environment snapshots.
+- Present in the default public git-tracked release:
+  retrieval benchmark files, expanded qrels artifacts, manual-eval pack and summaries, gold benchmark v1/v2/v3 assets, major extraction comparison runs, management commands, and environment snapshots.
+- Retained only in the live local workspace, not in the default public release archive:
+  manuscript PDF and raw literature PDFs.
 - Missing or still requiring author confirmation:
   LaTeX/Word manuscript source, `.bib`, the original annotated 80-sample CSV in `Downloads`, the original annotated batch-2 XLSX in `Downloads`, and an explicit author-written mapping from manuscript table/figure numbers to result files.
 - Version-risk items requiring care:
@@ -60,4 +62,4 @@ Run the packaging script from the project root:
 python scripts/create_submission_backup.py
 ```
 
-The script refreshes copied files, regenerates `09_archive_manifest/file_manifest.md`, writes packaging logs, and rebuilds `submission_backup/submission_backup.zip`.
+The script refreshes copied files, regenerates `09_archive_manifest/file_manifest.md`, writes packaging logs, and rebuilds `submission_backup/submission_backup.zip`. The default archive excludes `00_manuscript/`.

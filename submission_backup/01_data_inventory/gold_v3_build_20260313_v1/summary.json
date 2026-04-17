@@ -1,0 +1,13 @@
+{
+  "batch2_core_final_source": "backend/runs/gold_batch2_final_annotated_20260313_v1\\gold_seed_batch2_core_final.csv",
+  "gold_v2_source": "backend/evaluation/gold_seed_v2.csv",
+  "gold_seed_batch2_core_final_fixed_csv": "backend/runs/gold_v3_build_20260313_v1\\gold_seed_batch2_core_final_fixed.csv",
+  "gold_seed_batch2_core_final_fixed_xlsx": "backend/runs/gold_v3_build_20260313_v1\\gold_seed_batch2_core_final_fixed.xlsx",
+  "gold_seed_v3_csv": "backend/evaluation/gold_seed_v3.csv",
+  "gold_seed_v3_xlsx": "backend/evaluation/gold_seed_v3.xlsx",
+  "added_title": "Concentration and variability of the AIB amino acid in polar micrometeorites: Implications for the exogenous delivery of amino acids to the primitive Earth",
+  "duplicate_detected": false,
+  "v2_row_count": 22,
+  "v3_row_count": 23,
+  "supporting_not_merged": true
+}

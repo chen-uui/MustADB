@@ -44,7 +44,7 @@ DATABASE_CONFIG = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': get_env_var('DB_NAME', 'astrobiology_db'),
     'USER': get_env_var('DB_USER', 'postgres'),
-    'PASSWORD': get_env_var('DB_PASSWORD', 'password'),
+    'PASSWORD': get_env_var('DB_PASSWORD', ''),
     'HOST': get_env_var('DB_HOST', 'localhost'),
     'PORT': get_env_var('DB_PORT', '5432'),
 }
@@ -158,8 +158,8 @@ REST_FRAMEWORK = {
 
 # 安全配置
 SECURITY_CONFIG = {
-    'SECRET_KEY': get_env_var('SECRET_KEY', 'django-insecure-test-key-for-development-only'),
-    'JWT_SECRET': get_env_var('JWT_SECRET', 'jwt-test-secret-for-development-only'),
+    'SECRET_KEY': get_env_var('SECRET_KEY', 'dev-secret-key-change-before-production'),
+    'JWT_SECRET': get_env_var('JWT_SECRET', 'dev-jwt-secret-change-before-production'),
     'JWT_EXPIRATION': int(get_env_var('JWT_EXPIRATION', '3600')),  # 1小时
     'CORS_ORIGINS': get_env_var('CORS_ORIGINS', 'http://localhost:3000').split(','),
 }

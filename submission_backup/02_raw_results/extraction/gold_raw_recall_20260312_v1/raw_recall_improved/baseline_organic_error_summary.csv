@@ -1,0 +1,7 @@
+category,count,example_doc_ids
+field_empty_or_missing,1,fade062b-824d-4a04-9ccf-d6b62cb7359b
+missed_extraction,2,1ffc2a02-6ed2-4f6b-86a3-e92df6a04786; fade062b-824d-4a04-9ccf-d6b62cb7359b
+wrong_extraction,7,21ebc9cb-9abf-479f-95e0-adf827aedbf8; 5265cd7f-5e73-4bbe-b310-a72906513a40; 6051f599-8146-484d-8491-a0cdfdbe78a9
+over_broad_or_generalized,1,d9349b0a-c346-4316-914c-bd6e5d015b81
+normalization_or_projection_issue,0,
+duplicate_or_conflict,1,5265cd7f-5e73-4bbe-b310-a72906513a40

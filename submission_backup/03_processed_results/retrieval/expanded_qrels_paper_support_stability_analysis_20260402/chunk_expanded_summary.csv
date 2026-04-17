@@ -1,0 +1,4 @@
+chunk_size,chunk_overlap,collection_name,mode,alpha,n_queries,recall_at_5,mrr_at_5,ndcg_at_5
+500,50,PDFDocument_chunk_full_corpus_500_50_20260402_doclevel_fix,hybrid_rerank,0.7,20,0.4600,0.6208,0.4479
+700,80,PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix,hybrid_rerank,0.7,20,0.6033,0.7392,0.5562
+900,100,PDFDocument_chunk_full_corpus_900_100_20260402_doclevel_fix,hybrid_rerank,0.7,20,0.5450,0.6017,0.4948

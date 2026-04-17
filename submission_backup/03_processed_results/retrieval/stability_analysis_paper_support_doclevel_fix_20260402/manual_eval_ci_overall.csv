@@ -1,0 +1,5 @@
+metric,n_samples,point_estimate,ci_lower,ci_upper,bootstrap_n,bootstrap_unit,ci_method
+answer_accuracy,80,0.7875,0.6875,0.8750,2000,sample,percentile
+supported_rate,80,0.2625,0.1750,0.3625,2000,sample,percentile
+partially_supported_rate,80,0.6500,0.5375,0.7500,2000,sample,percentile
+unsupported_rate,80,0.0875,0.0375,0.1500,2000,sample,percentile
