@@ -2,7 +2,7 @@
 
 GitHub repository: `https://github.com/chen-uui/MustADB`
 
-This repository contains the public release codebase and curated manuscript-support materials for a PNAS Nexus submission on astrobiology literature retrieval and extraction. The runtime application lives in `ccc/astrobiology/`. A curated, smaller evidence bundle for manuscript traceability lives in `submission_backup/`.
+This repository contains the public release codebase and curated manuscript-support materials for evidence-grounded retrieval and structured extraction of extraterrestrial organic matter literature. It includes reproducibility artifacts supporting the revised Applied Computing and Geosciences submission.
 
 ## Included In This Public Release
 
