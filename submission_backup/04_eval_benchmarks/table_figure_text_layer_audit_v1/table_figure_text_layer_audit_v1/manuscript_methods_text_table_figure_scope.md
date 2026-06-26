@@ -1,0 +1,3 @@
+# Manuscript Methods Text: Table/Figure Scope
+
+The retrieval workflow operates on text extracted from the PDF text layer. Consequently, table captions, figure captions, and table-like text fragments can be indexed and retrieved when they are preserved as machine-readable text. The current benchmark does not evaluate layout-aware table reconstruction, image interpretation, or multimodal alignment between figures, captions, and body text. The system should therefore be interpreted as a text-grounded evidence retrieval workflow; layout-aware multimodal extraction is a natural extension rather than a capability claimed in the present experiments.

@@ -1,0 +1,3 @@
+# Final Manuscript Limitations Text: OCR
+
+The current benchmark primarily evaluates documents with machine-readable PDF text layers. A small smoke test on selected low-text files confirmed that rendered-page OCR can be executed, but OCR-heavy documents require OCR quality control and post-OCR evidence validation. We therefore do not claim that OCR robustness has been fully established for scanned or OCR-heavy historical literature; a dedicated OCR quality-control benchmark remains future work.

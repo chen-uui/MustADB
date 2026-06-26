@@ -1,0 +1,3 @@
+# Final Reviewer Response Text: OCR
+
+We added a focused OCR limitation check and a small true-OCR smoke test on selected low-text candidate PDFs. The test distinguishes the existing PDF text layer from text recognized after rendering pages and applying Tesseract OCR, without rebuilding the index or changing frozen retrieval results. The results support a limitation statement rather than a robustness claim: OCR-heavy documents require OCR quality control and post-OCR evidence validation, and a dedicated scanned-document benchmark remains future work.

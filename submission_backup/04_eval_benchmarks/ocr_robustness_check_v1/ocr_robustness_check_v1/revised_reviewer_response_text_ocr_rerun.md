@@ -1,0 +1,3 @@
+# Revised Reviewer Response Text: OCR Rerun
+
+We added a small OCR fallback smoke test to clarify implementation scope versus evaluated benchmark scope. The test reused selected low-text candidate PDFs and verified that the workflow can inspect the PDF text layer and render pages for OCR fallback without modifying the main index or frozen results. The current benchmark remains primarily text-layer based, and OCR-heavy documents require dedicated OCR runtime validation and quality-control benchmark. We therefore describe scanned/OCR-heavy literature as a limitation and future-work direction, rather than claiming that OCR robustness has been fully demonstrated.

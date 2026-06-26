@@ -1,0 +1,19 @@
+sample_id,filename,quality_class,tested_pages,text_length,token_count,avg_chars_per_page,text_page_ratio,alpha_ratio,printable_ratio,noise_score,replacement_char_count,mojibake_marker_count,short_line_ratio,missing_title_like_text,missing_abstract_marker,missing_section_marker,eom_keyword_hits
+OCRS001,runtime_weaviate.pdf,very_low_text_or_ocr_dependent_candidate,1,81,12,81.00,1.0000,0.8519,1.0000,0.0000,0,0,0.0000,1,1,1,2
+OCRS002,Search for past life on Mars.pdf,low_text_or_degraded_text,5,523,60,104.60,1.0000,0.8509,1.0000,0.0000,0,0,0.0000,0,1,1,0
+OCRS003,THE BIOLOGY OF MYCORRHIZA IN THE ERICACEAE- I. THE ISOLATION OF THE ENDOPHYTE AND SYNTHESIS OF MYCORRHIZAS IN ASEPTIC CULTURE.pdf,low_text_or_degraded_text,5,1501,244,300.20,0.8000,0.6795,1.0000,0.0000,0,0,0.0000,0,1,1,0
+OCRS004,"Due to an unfortunate misunderstanding, the surname of the ﬁrst author was incorrectly displayed. The The online version of the original article can be found under L. G. d. S. Ribas A. A. Padial ().pdf",low_text_or_degraded_text,1,979,171,979.00,1.0000,0.6721,1.0000,0.0096,0,0,0.0385,0,1,1,0
+OCRS005,codex_validation_48b06072.pdf,low_text_or_degraded_text,1,980,157,980.00,1.0000,0.7969,1.0000,0.0000,0,0,0.0000,0,1,1,0
+OCRS006,isms.2018.TL03.pdf,low_text_or_degraded_text,1,980,157,980.00,1.0000,0.7969,1.0000,0.0000,0,0,0.0000,0,1,1,0
+OCRS007,Microsoft Word - AST-2015-1306-Kimura-RSc_JK_final.docx.pdf,machine_readable,5,5046,771,1009.20,1.0000,0.7729,1.0000,0.0156,0,0,0.0625,0,0,0,12
+OCRS008,PhysRevE.95.022403.pdf,machine_readable,5,17975,3226,3595.00,1.0000,0.7221,1.0000,0.0525,0,0,0.2101,0,1,0,0
+OCRS009,Amino acids on witness coupons collected from the ISASJAXA curation facility for the assessment and quality control of the Hayabusa2 sampling procedure.pdf,machine_readable,5,20912,3506,4182.40,1.0000,0.7385,1.0000,0.0580,0,0,0.2318,0,0,0,68
+OCRS010,Numerical simulations of Asian dust storms using a coupled climateaerosol microphysical model.pdf,machine_readable,5,22814,3805,4562.80,1.0000,0.7479,1.0000,0.0013,0,0,0.0052,0,1,0,0
+OCRS011,10.1094_PDIS-05-13-0482-RE.pdf,machine_readable,5,41805,6829,8361.00,1.0000,0.7476,1.0000,0.0004,0,0,0.0016,0,0,0,2
+OCRS012,", Alexis Gilbert , Barbara Sherwood Lollar3,4, Thomas Giunta3,5, Christopher J. Boreham6, Qi Liu Yuichiro Ueno.pdf",machine_readable,5,31584,5284,6316.80,1.0000,0.7518,1.0000,0.0055,0,0,0.0220,0,1,0,47
+OCRS013,", Toshiki Koga Shogo Tachibana.pdf",machine_readable,5,22386,3803,4477.20,1.0000,0.7590,1.0000,0.0019,0,0,0.0077,0,1,0,46
+OCRS014,10.1007_s10955-011-0229-4.pdf,machine_readable,5,25906,4372,5181.20,1.0000,0.7726,1.0000,0.0214,0,0,0.0857,0,1,0,3
+OCRS015,10.1007_s11084-009-9164-7.pdf,machine_readable,5,15087,2369,3017.40,1.0000,0.7863,1.0000,0.0000,0,0,0.0000,0,1,0,5
+OCRS016,10.1007_s11084-010-9228-8.pdf,machine_readable,5,17061,2751,3412.20,1.0000,0.7754,1.0000,0.0032,0,0,0.0126,0,0,0,41
+OCRS017,10.1007_s11084-012-9270-9.pdf,machine_readable,1,2329,369,2329.00,1.0000,0.7583,1.0000,0.0000,0,0,0.0000,0,1,1,0
+OCRS018,10.1007_s11214-007-9224-0.pdf,machine_readable,5,16247,2720,3249.40,1.0000,0.7614,1.0000,0.0000,0,0,0.0000,0,0,0,2

@@ -1,0 +1,3 @@
+# Revised Manuscript Limitations Text: OCR
+
+The evaluated benchmark primarily covers documents with machine-readable PDF text layers. The system includes implementation support for scanned-PDF detection and OCR fallback, but the frozen retrieval and answer-generation experiments did not materially exercise OCR, and a small smoke test on selected low-text documents found that the local runtime lacked the OCR dependencies required to execute the fallback. Thus, the present results should not be interpreted as a benchmark of scanned or OCR-heavy literature. Selected low-text cases can be identified by text-quality gating, but dedicated OCR execution, quality control, and post-OCR evidence validation are needed before making OCR robustness claims.

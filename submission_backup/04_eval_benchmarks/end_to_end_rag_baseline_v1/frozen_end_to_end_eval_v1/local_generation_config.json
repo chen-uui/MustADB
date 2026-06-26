@@ -1,0 +1,17 @@
+{
+  "backend": "local/Ollama",
+  "ollama_base_url": "http://localhost:11434",
+  "generation_model": "llama3.1:8b-instruct-q4_K_M",
+  "temperature": 0.1,
+  "max_tokens": 4096,
+  "external_api_allowed": false,
+  "fail_fast": true,
+  "env_llm_model_fallback_allowed": false,
+  "pipelines": [
+    "llm_only",
+    "bm25_rag",
+    "dense_rag",
+    "hybrid_rag",
+    "hybrid_rerank_rag"
+  ]
+}

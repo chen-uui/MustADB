@@ -1,0 +1,3 @@
+# Revised Manuscript Limitations Text: OCR Rerun
+
+The current benchmark primarily evaluates documents with machine-readable PDF text layers. OCR-heavy documents require dedicated OCR runtime validation and quality-control benchmark. In the supplementary limitation check, low-text candidate files were used to verify the text-layer and page-rendering fallback path without rebuilding the main index. We therefore do not claim that OCR robustness has been fully established for scanned or OCR-heavy historical literature; future work should evaluate OCR quality control, text recovery, and downstream evidence availability in a dedicated scanned-document benchmark.

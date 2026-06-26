@@ -1,0 +1,6 @@
+pipeline,n,fully_supported_count,fully_supported_pct,partially_supported_count,partially_supported_pct,unsupported_count,unsupported_pct,answer_correct_count,answer_correct_pct,answer_incorrect_count,answer_unclear_count,evidence_mismatch_count,evidence_mismatch_pct,hallucination_flag_count,hallucination_flag_pct
+llm_only,20,0,0.0000,0,0.0000,20,1.0000,18,0.9000,2,0,0,0.0000,20,1.0000
+bm25_rag,20,7,0.3500,11,0.5500,2,0.1000,11,0.5500,2,7,2,0.1000,2,0.1000
+dense_rag,20,4,0.2000,15,0.7500,1,0.0500,16,0.8000,1,3,3,0.1500,2,0.1000
+hybrid_rag,20,5,0.2500,14,0.7000,1,0.0500,10,0.5000,2,8,5,0.2500,3,0.1500
+hybrid_rerank_rag,20,7,0.3500,11,0.5500,2,0.1000,11,0.5500,1,8,1,0.0500,1,0.0500

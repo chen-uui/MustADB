@@ -1,0 +1,63 @@
+{
+  "qa_samples": "D:\\workspace\\123\\submission_backup\\08_manual_annotations\\annotation_pack_paper_support_80samples_20260402_doclevel_fix\\qa_annotation_samples_80_merged.csv",
+  "metadata_csv": "D:\\workspace\\123\\submission_backup\\04_eval_benchmarks\\retrieval\\qrels_annotation\\qrels_annotation_template.csv",
+  "results_dir": "D:\\workspace\\123\\submission_backup\\04_eval_benchmarks\\retrieval\\qrels_evaluation_run_with_rerank",
+  "out_dir": "D:\\workspace\\123\\submission_backup\\04_eval_benchmarks\\end_to_end_rag_baseline_v1",
+  "config": "D:\\workspace\\123\\submission_backup\\04_eval_benchmarks\\config_audit_revision_v1\\revision_experiment_config.freeze.json",
+  "generation_backend": "local/Ollama",
+  "generation_model": "llama3.1:8b-instruct-q4_K_M",
+  "dense_embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "dense_vector_dimension": 768,
+  "weaviate_collection": "PDFDocument_chunk_full_corpus_700_80_20260402_doclevel_fix_mpnet768",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "rerank_input_candidate_depth": 20,
+  "final_evaluated_top_k": 10,
+  "external_api_allowed": false,
+  "env_llm_model_fallback_allowed": false,
+  "generic_collection_fallback_allowed": false,
+  "evidence_top_k": 5,
+  "snippet_chars": 1200,
+  "qa_sample_structure": {
+    "source_rows": 80,
+    "unique_questions": 20,
+    "mode_counts": {
+      "bm25": 20,
+      "dense": 20,
+      "hybrid": 20,
+      "hybrid_rerank": 20
+    },
+    "manual_label_nonempty_counts": {},
+    "fieldnames": [
+      "sample_id",
+      "qid",
+      "query",
+      "mode",
+      "alpha",
+      "collection_name",
+      "retrieved_doc_ids",
+      "retrieved_evidence_text",
+      "model_answer",
+      "source_paths",
+      "notes_for_annotator",
+      "answer_correct",
+      "evidence_support",
+      "unsupported_span_note",
+      "annotation_note"
+    ]
+  },
+  "pipeline_counts": {
+    "llm_only": 20,
+    "bm25_rag": 20,
+    "dense_rag": 20,
+    "hybrid_rag": 20,
+    "hybrid_rerank_rag": 20
+  },
+  "missing_ranked_results": {},
+  "missing_metadata_snippets": {
+    "llm_only": 0,
+    "bm25_rag": 0,
+    "dense_rag": 0,
+    "hybrid_rag": 0,
+    "hybrid_rerank_rag": 0
+  }
+}

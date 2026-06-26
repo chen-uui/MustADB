@@ -1,0 +1,7 @@
+# Manuscript Results Text: End-to-End LLM-Only vs RAG Baseline
+
+In the end-to-end answer-generation comparison, all five settings used the same local Ollama generation model (`llama3.1:8b-instruct-q4_K_M`) with fixed decoding parameters. This setup isolates the contribution of retrieval evidence rather than differences between LLM backends. The LLM-only condition produced factually correct answers for 18/20 questions (90.0%), but none of its answers were document-grounded because no retrieved evidence was supplied. Accordingly, all LLM-only answers were labeled unsupported for evidence support, and the hallucination/specific unsupported-claim flag was marked in 20/20 cases (100.0%).
+
+Retrieval-augmented settings provided document evidence and therefore allowed answer support to be assessed against explicit sources. Fully supported answers were observed for BM25+LLM (7/20, 35.0%), dense+LLM (4/20, 20.0%), hybrid+LLM (5/20, 25.0%), and hybrid+rerank+LLM (7/20, 35.0%). These results should not be interpreted as RAG being superior on every metric or every query; rather, they show that retrieval changes the evaluation target by making evidence grounding and source-level auditing possible.
+
+These findings support the model-agnostic design of the system. Larger LLMs can be substituted as the generation backend, but the retrieval and evidence-grounding components remain necessary when the goal is literature-grounded, auditable scientific answering rather than plausible unconstrained generation.
