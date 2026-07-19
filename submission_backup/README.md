@@ -1,6 +1,6 @@
 # Submission Backup Package
 
-This package is a curated backup for the PNAS Nexus submission materials in this workspace. Its goal is not to snapshot the whole repository, but to preserve a traceable evidence chain for the current manuscript, the benchmark definitions behind the reported experiments, the retained result files, and the scripts/configuration needed to inspect or repackage them later.
+This package is a curated reproducibility archive supporting the revised manuscript submitted to *Applied Computing and Geosciences*. Its goal is not to snapshot the whole repository, but to preserve a traceable evidence chain for the manuscript, the benchmark definitions behind the reported experiments, the retained result files, and the scripts/configuration needed to inspect or reproduce the reported analyses.
 
 ## What This Package Is For
 
@@ -36,23 +36,34 @@ This package is a curated backup for the PNAS Nexus submission materials in this
   `08_manual_annotations/annotation_pack_paper_support_80samples_20260402_doclevel_fix/`
   plus
   `08_manual_annotations/annotation_summary_paper_support_80_20260402/`.
+- Revised end-to-end LLM-only and RAG comparison:
+  `04_eval_benchmarks/end_to_end_rag_baseline_v1/frozen_end_to_end_eval_v1/`,
+  including the frozen generation configuration, generated outputs, answer-level annotations, and paper-ready metrics.
+- Expanded 45-query retrieval benchmark:
+  `04_eval_benchmarks/retrieval/expanded_query_set.jsonl`,
+  `04_eval_benchmarks/retrieval/retrieval_qrels_expanded.csv`,
+  and
+  `04_eval_benchmarks/retrieval/qrels_evaluation_run_with_rerank/`.
 - Extraction benchmark provenance:
   `04_eval_benchmarks/extraction/`
   plus the benchmark-build records in `01_data_inventory/`.
 - Extraction evaluation and field-level comparison:
   `03_processed_results/extraction/`
   backed by the rerun outputs in `02_raw_results/extraction/`.
+- Reviewer-requested scope and error analyses:
+  `04_eval_benchmarks/contamination_controls_error_analysis_v1/`,
+  `04_eval_benchmarks/ocr_robustness_check_v1/`,
+  and
+  `04_eval_benchmarks/table_figure_text_layer_audit_v1/`.
 
 ## Current Completeness
 
-- Present in the default public git-tracked release:
-  retrieval benchmark files, expanded qrels artifacts, manual-eval pack and summaries, gold benchmark v1/v2/v3 assets, major extraction comparison runs, management commands, and environment snapshots.
-- Retained only in the live local workspace, not in the default public release archive:
-  manuscript PDF and raw literature PDFs.
-- Missing or still requiring author confirmation:
-  LaTeX/Word manuscript source, `.bib`, the original annotated 80-sample CSV in `Downloads`, the original annotated batch-2 XLSX in `Downloads`, and an explicit author-written mapping from manuscript table/figure numbers to result files.
-- Version-risk items requiring care:
-  retrieval results exist in multiple lineages, and alpha conclusions differ between the seed-qrels ablation and the expanded-qrels paper-support analysis. See `09_archive_manifest/missing_items.md`.
+- Present in the public git-tracked release:
+  the expanded retrieval query set and qrels, per-method ranked outputs and metrics, the frozen five-pipeline end-to-end evaluation, answer-support annotations, manual-evaluation assets, gold benchmark v1/v2/v3 assets, extraction comparisons, contamination-control error analysis, OCR checks, table/figure text-layer audit, management commands, and environment snapshots.
+- Intentionally not redistributed:
+  copyrighted literature PDFs, local vector-store data, model weights, uploaded files, runtime logs, machine-specific assets, and journal submission files. These exclusions match the manuscript's Data Availability statement and are not missing benchmark evidence.
+- Manuscript-facing result locations are mapped in the repository-root `PAPER_RESULTS_MAP.md`.
+- Historical seed-qrels and intermediate run lineages are retained for provenance. The revised manuscript's alpha statement is supported by the expanded-qrels reranked-hybrid analysis in `03_processed_results/retrieval/expanded_qrels_paper_support_stability_analysis_20260402/`, where alpha 0.7 and 0.9 have identical saved query-level results.
 
 ## Regeneration
 

@@ -1,42 +1,38 @@
-# Missing Items And Risks
+# Archive Exclusions And Version Notes
 
-This file lists gaps or ambiguities that matter for auditability and later reproduction. Nothing below was fabricated or silently resolved.
+This file records the reproducibility boundary and retained historical lineages for the revised *Applied Computing and Geosciences* manuscript. The items below are documented exclusions or provenance notes, not unresolved manuscript-result checks.
 
-## Missing Source Materials
+## Intentionally Excluded Materials
 
-- No LaTeX source, Word source, or `.bib` file for the current manuscript was found during the repository scan.
-- No clearly named supplementary-material source package tied to the current submission was found.
-- The manual-evaluation summary points to `external/Downloads/qa_annotation_samples_80_annotated.csv`, but that annotated source CSV is not stored in this repository.
-- The batch-2 benchmark summary points to `external/Downloads/batch2_review_candidates_annotated.xlsx`, but that annotated source XLSX is not stored in this repository.
+- Journal submission files, including the manuscript source, bibliography, response letter, and submission PDFs, are maintained separately from this public reproducibility repository.
+- Copyrighted literature PDFs, local vector-store data, model weights, uploaded files, runtime logs, and machine-specific assets are not redistributed.
+- Some legacy annotation summaries refer to original working copies outside the repository. The frozen public benchmark and annotation artifacts used for the reported analyses are retained under `04_eval_benchmarks/` and `08_manual_annotations/`.
 
-## Version Ambiguity
+These exclusions match the revised manuscript's Data Availability statement.
 
-- Retrieval results exist in multiple lineages:
-  `ccc/astrobiology/backend/evaluation/retrieval_quality_summary.csv`
-  `ccc/astrobiology/backend/runs/default_eval_seed_20260402_doclevel_fix/`
-  `ccc/astrobiology/backend/runs/paper_ready_retrieval_quality_20260402_doclevel_fix/`
-  `ccc/astrobiology/backend/runs/expanded_qrels_paper_support_stability_analysis_20260402/`
-  The paper-ready/doc-level lineage appears to be the intended evidence chain, but the repository also contains stronger earlier numbers. Author confirmation is needed if any manuscript text cites a specific metric value.
-- Alpha conclusions are not fully uniform across retained runs:
-  `retrieval_alpha_ablation_20260402_doclevel_fix/alpha_ablation_summary.csv`
-  shows separation across alpha settings on the seed benchmark, while
-  `expanded_qrels_paper_support_stability_analysis_20260402/alpha_expanded_paired_ci_summary.csv`
-  and
-  `stability_analysis_paper_support_doclevel_fix_20260402/alpha_paired_ci_summary.csv`
-  show no practical difference for the paper-support comparison. The manuscript wording should be checked against the intended benchmark scope.
+## Retrieval Version Lineages
 
-## Naming And Encoding Risks
+Multiple retrieval lineages are retained to preserve provenance, including seed-qrels, document-level, and expanded-qrels runs. The revised manuscript uses the 45-query, 683-judgment benchmark and the reranking evaluation under:
 
-- Several candidate-document files contain generic or truncated titles such as `Academic Paper`, plus some filenames/snippets show encoding corruption in the current terminal session.
-- `.env.template` also displays mojibake in the current shell view. The file itself is archived, but if it is later edited or quoted, encoding should be checked first.
+- `04_eval_benchmarks/retrieval/expanded_query_set.jsonl`
+- `04_eval_benchmarks/retrieval/retrieval_qrels_expanded.csv`
+- `04_eval_benchmarks/retrieval/qrels_evaluation_run_with_rerank/`
 
-## Traceability Gaps
+Historical seed-qrels outputs are not the basis of the revised manuscript's final metric table.
 
-- The repository does not contain an explicit author-written mapping from final manuscript table/figure numbers to result files. The traceability map in this package is therefore based on filenames, run summaries, and paper-support directory names.
-- No explicit in-repo figure-source spreadsheets or plotting notebooks tied to the manuscript PDF were found. Table-ready CSVs were found for retrieval and manual evaluation, but final plot-generation scripts are not obvious.
+## Alpha Sensitivity Interpretation
 
-## Follow-Up Checks Recommended
+The revised manuscript statement refers specifically to the retained 700/80 reranked-hybrid expanded-qrels analysis. In the saved query-level results, alpha 0.7 and alpha 0.9 are identical. Supporting summaries are retained under:
 
-- Confirm that `Astrobiology Manuscript Revised.pdf` is the exact submission build.
-- Confirm which retrieval table in the manuscript should be linked to the seed-only alpha ablation versus the expanded-qrels paper-support analysis.
-- Confirm whether any response-letter or supplement draft exists outside the repository and should be added later.
+- `03_processed_results/retrieval/expanded_qrels_paper_support_stability_analysis_20260402/`
+- `03_processed_results/retrieval/stability_analysis_paper_support_doclevel_fix_20260402/`
+
+Earlier seed-qrels alpha-ablation outputs remain archived as historical runs and should not be substituted for the scoped revised-manuscript statement.
+
+## Traceability
+
+The repository-root `PAPER_RESULTS_MAP.md` maps the revised manuscript's figures, tables, and principal claims to the current public artifacts, including retrieval, end-to-end answer evaluation, extraction, OCR, and table/figure text-layer analyses.
+
+## Legacy Naming And Encoding
+
+Some historical candidate-document files contain generic or truncated titles, and a small number of legacy filenames or environment snapshots may display differently across terminal encodings. These retained legacy records do not alter the frozen benchmark definitions or reported result files.

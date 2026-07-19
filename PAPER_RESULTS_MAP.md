@@ -1,6 +1,6 @@
 # Paper Results Map
 
-This file maps the current manuscript-support claims to the retained public artifacts in this repository. The mappings are topic-based because the repository does not encode final manuscript table or figure numbers.
+This file maps the revised *Applied Computing and Geosciences* manuscript claims to the retained public artifacts in this repository. Manuscript numbering below refers to the current revised version.
 
 ## Main Retrieval Comparison
 
@@ -9,8 +9,12 @@ This file maps the current manuscript-support claims to the retained public arti
 - Raw result chain:
   `submission_backup/02_raw_results/retrieval/paper_ready_retrieval_quality_20260402_doclevel_fix/`
 - Benchmark inputs:
-  `submission_backup/04_eval_benchmarks/retrieval/queries.jsonl`
-  `submission_backup/04_eval_benchmarks/retrieval/retrieval_qrels_seed.csv`
+  `submission_backup/04_eval_benchmarks/retrieval/expanded_query_set.jsonl`
+  `submission_backup/04_eval_benchmarks/retrieval/retrieval_qrels_expanded.csv`
+- Revised 45-query/683-judgment evaluation, including reranking:
+  `submission_backup/04_eval_benchmarks/retrieval/qrels_evaluation_run_with_rerank/`
+- Manuscript mapping:
+  Figure 2(a), Table 2, and the retrieval portion of the Results section.
 
 ## Retrieval Robustness, Chunking, And Alpha Checks
 
@@ -24,6 +28,20 @@ This file maps the current manuscript-support claims to the retained public arti
   `submission_backup/02_raw_results/retrieval/chunk_ablation_full_corpus_500_50_20260402_doclevel_fix/`
   `submission_backup/02_raw_results/retrieval/chunk_ablation_full_corpus_700_80_20260402_doclevel_fix/`
   `submission_backup/02_raw_results/retrieval/chunk_ablation_full_corpus_900_100_20260402_doclevel_fix/`
+- Manuscript mapping:
+  Figure 2(d), Table 3, and the alpha/chunking sensitivity discussion.
+- Final alpha interpretation:
+  for the retained 700/80 reranked-hybrid setting, alpha 0.7 and alpha 0.9 are identical in the saved query-level expanded-qrels results. Seed-qrels runs are retained as historical provenance and are not the basis of the revised manuscript statement.
+
+## End-to-End LLM-Only And RAG Evaluation
+
+- Frozen experiment design, configuration, prompts, and generated outputs:
+  `submission_backup/04_eval_benchmarks/end_to_end_rag_baseline_v1/frozen_end_to_end_eval_v1/`
+- Paper-ready answer-level metrics and support-label decomposition:
+  `submission_backup/04_eval_benchmarks/end_to_end_rag_baseline_v1/frozen_end_to_end_eval_v1/answer_level_evaluation/paper_ready_end_to_end_metrics_table.csv`
+  `submission_backup/04_eval_benchmarks/end_to_end_rag_baseline_v1/frozen_end_to_end_eval_v1/answer_level_evaluation/paper_ready_partially_supported_subtype_table.csv`
+- Manuscript mapping:
+  Figure 2(b)--(c), Table 4, and the discussion separating content correctness from document-grounded evidence support.
 
 ## Manual Evaluation
 
@@ -56,10 +74,22 @@ This file maps the current manuscript-support claims to the retained public arti
   `submission_backup/03_processed_results/extraction/gold_field_specific_narrow_20260312_v1/`
   `submission_backup/03_processed_results/extraction/gold_class_preservation_20260312_v1/`
   `submission_backup/03_processed_results/extraction/gold_raw_recall_20260312_v1/`
+- Contamination-control error analysis:
+  `submission_backup/04_eval_benchmarks/contamination_controls_error_analysis_v1/contamination_controls_error_analysis_v1/`
+- Manuscript mapping:
+  Table 6 and the contamination-control error discussion.
 
-## Important Gaps Requiring Author Confirmation
+## OCR And Table/Figure Scope Audits
 
-- The final manuscript table and figure numbering is not encoded in the repository.
-- Some original annotation inputs lived outside the repository and are listed in `submission_backup/09_archive_manifest/missing_items.md`.
-- The manuscript wording around alpha sensitivity should be checked against the retained seed-qrels and expanded-qrels analyses before publication.
-- The software citation metadata in `CITATION.cff` now points to the public GitHub repository; the Zenodo DOI can be added after archival release.
+- OCR robustness and six-file fallback smoke test:
+  `submission_backup/04_eval_benchmarks/ocr_robustness_check_v1/ocr_robustness_check_v1/`
+- Table/figure text-layer audit:
+  `submission_backup/04_eval_benchmarks/table_figure_text_layer_audit_v1/table_figure_text_layer_audit_v1/`
+- Manuscript mapping:
+  the OCR and table/figure scope statements in Materials and Methods, Discussion, and Supplementary Sections S5--S7.
+
+## Reproducibility Boundary
+
+- Copyrighted source PDFs, local vector stores, model weights, uploaded files, runtime logs, and machine-specific assets are intentionally excluded.
+- Journal submission files are maintained separately from this public reproducibility repository.
+- The software citation metadata in `CITATION.cff` points to the public GitHub repository; a Zenodo DOI can be added after an archival release is created.
